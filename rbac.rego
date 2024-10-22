@@ -1,99 +1,181 @@
-# Role-based Access Control (RBAC)
-# --------------------------------
-#
-# This example defines an RBAC model for a Pet Store API. The Pet Store API allows
-# users to look at pets, adopt them, update their stats, and so on. The policy
-# controls which users can perform actions on which resources. The policy implements
-# a classic Role-based Access Control model where users are assigned to roles and
-# roles are granted the ability to perform some action(s) on some type of resource.
-#
-# This example shows how to:
-#
-#	* Define an RBAC model in Rego that interprets role mappings represented in JSON.
-#	* Iterate/search across JSON data structures (e.g., role mappings)
-#
-# For more information see:
-#
-#	* Rego comparison to other systems: https://www.openpolicyagent.org/docs/latest/comparison-to-other-systems/
-#	* Rego Iteration: https://www.openpolicyagent.org/docs/latest/#iteration
+package goapice.check_user
 
-package app.rbac
+import rego.v1
 
-# import data.utils
+######################################################################################################
+#                               Permissões Default (Com unidade especificada)                        #
+######################################################################################################
 
-# By default, deny requests
-default allow = false
+default user_allow := false
 
-# Allow admins to do anything
-allow {
-	user_is_admin
+user_allow if {
+	user_is_sysadmin
+	not user_has_custom_disallowance
 }
 
-# Allow bob to do anything
-#allow {
-#	input.user == "bob"
-#}
-
-# you can ignore this rule, it's simply here to create a dependency
-# to another rego policy file, so we can demonstate how to work with
-# an explicit manifest file (force order of policy loading).
-#allow {
-#	input.matching_policy.grants
-#	input.roles
-#	utils.hasPermission(input.matching_policy.grants, input.roles)
-#}
-
-# Allow the action if the user is granted permission to perform the action.
-allow {
-	# Find permissions for the user.
-	some permission
-	user_is_granted[permission]
-
-	# Check if the permission permits the action.
-	input.action == permission.action
-	input.type == permission.type
-
-	# unless user location is outside US
-	country := data.users[input.user].location.country
-	country == "US"
+user_allow if {
+	user_has_role_permission
+	not user_has_custom_disallowance
 }
 
-# user_is_admin is true if...
-user_is_admin {
-	# for some `i`...
-	some i
-
-	# "admin" is the `i`-th element in the user->role mappings for the identified user.
-	data.users[input.user].roles[i] == "admin"
+user_allow if {
+	user_has_custom_permission
+	not user_has_custom_disallowance
 }
 
-# user_is_viewer is true if...
-user_is_viewer {
-	# for some `i`...
-	some i
-
-	# "viewer" is the `i`-th element in the user->role mappings for the identified user.
-	data.users[input.user].roles[i] == "viewer"
+# Regra para verificar se o usuário é sysadmin
+user_is_sysadmin if {
+	data.tenants[input.tenant].users[input.user].sysadmin == true
 }
 
-# user_is_guest is true if...
-user_is_guest {
-	# for some `i`...
-	some i
+# Verifica se o usuário tem uma permissão específica baseada no seu papel na unidade (role permission)
+user_has_role_permission if {
+	role := data.tenants[input.tenant].users[input.user].units[input.unit].roles[_]
+	input.action == data.tenants[input.tenant].rolePermissions[role].permissions[_]
+}
 
-	# "guest" is the `i`-th element in the user->role mappings for the identified user.
-	data.users[input.user].roles[i] == "guest"
+######################################################################################################
+#                                   Permissões/Proibições custom                                     #
+######################################################################################################
+# Verifica se o usuário tem uma permissão customizada em uma action específica
+user_has_custom_permission if {
+	input.action in data.tenants[input.tenant].users[input.user].units[input.unit].custom_permissions
+}
+
+# Verifica se o usuário tem uma proibição customizada em uma action específica
+user_has_custom_disallowance if {
+	input.action in data.tenants[input.tenant].users[input.user].units[input.unit].custom_disallowances
+}
+
+######################################################################################################
+#                               Permissões Default (Sem unidade especificada)                        #
+######################################################################################################
+user_has_role_permission_in_any_unit if {
+	some unit in data.tenants[input.tenant].users[input.user].units
+	some role in unit.roles
+	input.action in data.tenants[input.tenant].rolePermissions[role].permissions
+}
+
+user_has_custom_permission_in_any_unit if {
+	some unit in data.tenants[input.tenant].users[input.user].units
+	input.action in unit.custom_permissions
+}
+
+user_has_custom_disallowance_in_any_unit if {
+	some unit in data.tenants[input.tenant].users[input.user].units
+	input.action in unit.custom_disallowances
+}
+
+######################################################################################################
+#                                      Permissões por Resource ID                                    #
+######################################################################################################
+default resource_allow := false
+
+resource_allow if {
+	user_allow
+	user_access_resource
+}
+
+resource_allow if {
+	user_allow
+	user_groups_access_resource
+}
+
+# Pega o tipo do resource parsenado input.action
+resource_type := split(input.action, ".")[1]
+
+# Pega a action desejada parseando input.action
+action_intent = result if {
+	arr := split(input.action, ".")
+	result := arr[count(arr) - 1]
+}
+
+# Verifica se o usuário tem permissão para executar a ação desejada neste resource.id
+user_access_resource if {
+	reachable_actions := graph.reachable(data.sharing[resource_type].shared_graphs, [data.tenants[input.tenant].resources[resource_type][input.resource_id].userPermissions[input.user]])
+	action_intent in reachable_actions
+}
+
+# Verifica se o usuário pertence a um grupo que tenha permissão para executar a ação desejada neste resource.id
+user_groups_access_resource if {
+	group := data.tenants[input.tenant].users[input.user].groups[_]
+	reachable_actions := graph.reachable(data.sharing[resource_type].shared_graphs, [data.tenants[input.tenant].resources[resource_type][input.resource_id].groupPermissions[group]])
+	action_intent in reachable_actions
+}
+
+######################################################################################################
+#                                Lista Resources IDs para input.action                               #
+######################################################################################################
+user_accessible_resources := user_personal_accessible_resources | user_groups_accessible_resources
+
+user_personal_accessible_resources := {resource_key |
+	some resource_key, resource_id in data.tenants[input.tenant].resources[resource_type]
+	user_permission := resource_id.userPermissions[input.user]
+	reachable_actions := graph.reachable(data.sharing[resource_type].shared_graphs, [user_permission])
+	action_intent in reachable_actions
+}
+
+user_groups_accessible_resources := {resource_key |
+	some resource_key, resource_id in data.tenants[input.tenant].resources[resource_type]
+	some group in data.tenants[input.tenant].users[input.user].groups
+	group_permission := resource_id.groupPermissions[group]
+	reachable_actions := graph.reachable(data.sharing[resource_type].shared_graphs, [group_permission])
+	action_intent in reachable_actions
+}
+
+######################################################################################################
+#                                       Permissões por unidade                                       #
+######################################################################################################
+# Regra principal que retorna um mapa das permissões por unidade
+user_unit_permissions := {unit_key: permission_map |
+	unit_key := unit
+	unit_permissions := data.tenants[input.tenant].users[input.user].units[unit]
+	permission_map := check_permissions(unit_permissions.roles, unit_permissions.custom_permissions, unit_permissions.custom_disallowances)
 }
 
 
-# user_is_granted is a set of permissions for the user identified in the request.
-# The `permission` will be contained if the set `user_is_granted` for every...
-user_is_granted[permission] {
-	some i, j
+check_permissions(roles, custom_permissions, custom_disallowances) = result if {
+	role_permissions := {perm |
+		some role in roles
+		perm := data.tenants[input.tenant].rolePermissions[role].permissions[_]
+	}
 
-	# `role` assigned an element of the user_roles for this user...
-	role := data.users[input.user].roles[i]
+	all_permissions := role_permissions | {x | x := custom_permissions[_]}
+	result := all_permissions - {x | x := custom_disallowances[_]}
+}
 
-	# `permission` assigned a single permission from the permissions list for 'role'...
-	permission := data.role_permissions[role][j]
+######################################################################################################
+#                                       Permissões por unidade                                       #
+######################################################################################################
+all_actions := union({action |
+    # Iterar sobre os tenants
+    tenant := data.tenants[_]
+
+    # Verificar permissões baseadas em roles
+    role := tenant.rolePermissions[_]
+    role_actions := {x | x := role.permissions[_]}
+
+    # Verificar permissões customizadas nas unidades dos usuários
+    user := tenant.users[_]
+    unit := user.units[_]
+
+    # Permissões personalizadas
+    custom_actions := {x | x := unit.custom_permissions[_]}
+#
+#     # Disallowances personalizadas
+    disallowances_actions := {x | x:= unit.custom_disallowances[_]}
+
+    action := role_actions | custom_actions | disallowances_actions
+})
+
+######################################################################################################
+#                                       Display Map                                                  #
+######################################################################################################
+display_map := {unit_key: display_map |
+	unit_key := unit
+    unit_permissions := user_unit_permissions[unit]
+    display_map := {perm: allowed |
+        perm := all_actions[_]
+        allowed := perm in unit_permissions
+    }
 }
