@@ -9,29 +9,39 @@ import rego.v1
 default user_allow := false
 
 user_allow if {
-	user_is_sysadmin
-	not user_has_custom_disallowance
+    user_is_sysadmin
+    not user_has_custom_disallowance
 }
 
 user_allow if {
-	user_has_role_permission
-	not user_has_custom_disallowance
+    user_has_role_permission
+    not user_has_custom_disallowance
 }
 
 user_allow if {
-	user_has_custom_permission
-	not user_has_custom_disallowance
+    user_has_custom_permission
+    not user_has_custom_disallowance
 }
 
 # Regra para verificar se o usuário é sysadmin
 user_is_sysadmin if {
-	data.tenants[input.tenant].users[input.user].sysadmin == true
+    customer := data.customers[_]
+    user := customer.users[_]
+    user.sysadmin == true
+    user.uuid == input.user
 }
 
 # Verifica se o usuário tem uma permissão específica baseada no seu papel na unidade (role permission)
 user_has_role_permission if {
-	role := data.tenants[input.tenant].users[input.user].units[input.unit].roles[_]
-	input.action == data.tenants[input.tenant].rolePermissions[role].permissions[_]
+    customer := data.customers[_]
+    user := customer.users[_]
+    unit := user.units[_]
+    role := unit.roles[_]
+    role_permission := customer.rolePermissions[_]
+    role_permission.role == role
+    input.action == role_permission.permissions[_]
+    user.uuid == input.user
+    unit.uuid == input.unit
 }
 
 ######################################################################################################
@@ -39,12 +49,26 @@ user_has_role_permission if {
 ######################################################################################################
 # Verifica se o usuário tem uma permissão customizada em uma action específica
 user_has_custom_permission if {
-	input.action in data.tenants[input.tenant].users[input.user].units[input.unit].custom_permissions
+    customer := data.customers[_]
+    user := customer.users[_]
+    unit := user.units[_]
+    permission := unit.directPermissions[_]
+    permission.action == input.action
+    permission.effect == "allow"
+    user.uuid == input.user
+    unit.uuid == input.unit
 }
 
 # Verifica se o usuário tem uma proibição customizada em uma action específica
 user_has_custom_disallowance if {
-	input.action in data.tenants[input.tenant].users[input.user].units[input.unit].custom_disallowances
+    customer := data.customers[_]
+    user := customer.users[_]
+    unit := user.units[_]
+    permission := unit.directPermissions[_]
+    permission.action == input.action
+    permission.effect == "deny"
+    user.uuid == input.user
+    unit.uuid == input.unit
 }
 
 ######################################################################################################
