@@ -31,6 +31,8 @@ user_is_sysadmin if {
     user.uuid == input.user
 }
 
+default user_has_role_permission := false
+
 # Verifica se o usuário tem uma permissão específica baseada no seu papel na unidade (role permission)
 user_has_role_permission if {
     customer := data.customers[_]
