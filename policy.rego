@@ -9,41 +9,41 @@ import rego.v1
 default user_allow := false
 
 user_allow if {
-    user_is_sysadmin
-    not user_has_custom_disallowance
+	user_is_sysadmin
+	not user_has_custom_disallowance
 }
 
 user_allow if {
-    user_has_role_permission
-    not user_has_custom_disallowance
+	user_has_role_permission
+	not user_has_custom_disallowance
 }
 
 user_allow if {
-    user_has_custom_permission
-    not user_has_custom_disallowance
+	user_has_custom_permission
+	not user_has_custom_disallowance
 }
 
 # Regra para verificar se o usuário é sysadmin
 user_is_sysadmin if {
-    customer := data.customers[_]
-    user := customer.users[_]
-    user.sysadmin == true
-    user.uuid == input.user
+	customer := data.customers[_]
+	user := customer.users[_]
+	user.sysadmin == true
+	user.uuid == input.user
 }
 
 default user_has_role_permission := false
 
 # Verifica se o usuário tem uma permissão específica baseada no seu papel na unidade (role permission)
 user_has_role_permission if {
-    customer := data.customers[_]
-    user := customer.users[_]
-    unit := user.units[_]
-    role := unit.roles[_]
-    role_permission := customer.rolePermissions[_]
-    role_permission.role == role
-    input.action == role_permission.permissions[_]
-    user.uuid == input.user
-    unit.uuid == input.unit
+	customer := data.customers[_]
+	user := customer.users[_]
+	unit := user.units[_]
+	role := unit.roles[_]
+	role_permission := customer.rolePermissions[_]
+	role_permission.role == role
+	input.action == role_permission.permissions[_]
+	user.uuid == input.user
+	unit.uuid == input.unit
 }
 
 ######################################################################################################
@@ -51,45 +51,64 @@ user_has_role_permission if {
 ######################################################################################################
 # Verifica se o usuário tem uma permissão customizada em uma action específica
 user_has_custom_permission if {
-    customer := data.customers[_]
-    user := customer.users[_]
-    unit := user.units[_]
-    permission := unit.directPermissions[_]
-    permission.action == input.action
-    permission.effect == "allow"
-    user.uuid == input.user
-    unit.uuid == input.unit
+	customer := data.customers[_]
+	user := customer.users[_]
+	unit := user.units[_]
+	permission := unit.directPermissions[_]
+	permission.action == input.action
+	permission.effect == "allow"
+	user.uuid == input.user
+	unit.uuid == input.unit
 }
 
 # Verifica se o usuário tem uma proibição customizada em uma action específica
 user_has_custom_disallowance if {
-    customer := data.customers[_]
-    user := customer.users[_]
-    unit := user.units[_]
-    permission := unit.directPermissions[_]
-    permission.action == input.action
-    permission.effect == "deny"
-    user.uuid == input.user
-    unit.uuid == input.unit
+	customer := data.customers[_]
+	user := customer.users[_]
+	unit := user.units[_]
+	permission := unit.directPermissions[_]
+	permission.action == input.action
+	permission.effect == "deny"
+	user.uuid == input.user
+	unit.uuid == input.unit
 }
 
 ######################################################################################################
-#                               Permissões Default (Sem unidade especificada)                        #
+#                               Permissões Default (Iterando por Customers)                         #
 ######################################################################################################
+
+# Permissão baseada em role em qualquer unidade
 user_has_role_permission_in_any_unit if {
-	some unit in data.tenants[input.tenant].users[input.user].units
+	some customer in data.customers
+	some user in customer.users
+	user.uuid == input.user
+	some unit in user.units
 	some role in unit.roles
-	input.action in data.tenants[input.tenant].rolePermissions[role].permissions
+	some rolePermission in customer.rolePermissions
+	rolePermission.role == role
+	input.action in rolePermission.permissions
 }
 
+# Permissão customizada em qualquer unidade
 user_has_custom_permission_in_any_unit if {
-	some unit in data.tenants[input.tenant].users[input.user].units
-	input.action in unit.custom_permissions
+	some customer in data.customers
+	some user in customer.users
+	user.uuid == input.user
+	some unit in user.units
+	some permission in unit.directPermissions
+	permission.effect == "allow"
+	permission.action == input.action
 }
 
+# Proibição customizada em qualquer unidade
 user_has_custom_disallowance_in_any_unit if {
-	some unit in data.tenants[input.tenant].users[input.user].units
-	input.action in unit.custom_disallowances
+	some customer in data.customers
+	some user in customer.users
+	user.uuid == input.user
+	some unit in user.units
+	some permission in unit.directPermissions
+	permission.effect == "deny"
+	permission.action == input.action
 }
 
 ######################################################################################################
@@ -111,7 +130,7 @@ resource_allow if {
 resource_type := split(input.action, ".")[1]
 
 # Pega a action desejada parseando input.action
-action_intent = result if {
+action_intent := result if {
 	arr := split(input.action, ".")
 	result := arr[count(arr) - 1]
 }
@@ -154,44 +173,60 @@ user_groups_accessible_resources := {resource_key |
 ######################################################################################################
 # Regra principal que retorna um mapa das permissões por unidade
 user_unit_permissions := {unit_key: permission_map |
-	unit_key := unit
-	unit_permissions := data.tenants[input.tenant].users[input.user].units[unit]
-	permission_map := check_permissions(unit_permissions.roles, unit_permissions.custom_permissions, unit_permissions.custom_disallowances)
+	some customer in data.customers
+	some user in customer.users
+	user.uuid == input.user
+	some unit in user.units
+	unit_key := unit.uuid
+	permission_map := check_permissions(customer, unit.roles, unit.directPermissions)
 }
 
-
-check_permissions(roles, custom_permissions, custom_disallowances) = result if {
+# Função para verificar permissões com base em roles e permissões diretas
+check_permissions(customer, roles, direct_permissions) := result if {
+	# Permissões baseadas em roles
 	role_permissions := {perm |
 		some role in roles
-		perm := data.tenants[input.tenant].rolePermissions[role].permissions[_]
+		some rolePermission in customer.rolePermissions
+		rolePermission.role == role
+		perm := rolePermission.permissions[_]
 	}
 
-	all_permissions := role_permissions | {x | x := custom_permissions[_]}
-	result := all_permissions - {x | x := custom_disallowances[_]}
+	# Permissões customizadas (allow e deny)
+	allow_permissions := {perm.action |
+		some perm in direct_permissions
+		perm.effect == "allow"
+	}
+
+	deny_permissions := {perm.action |
+		some perm in direct_permissions
+		perm.effect == "deny"
+	}
+
+	# União das permissões de roles e permissões allow, menos os denies
+	all_permissions := role_permissions | allow_permissions
+	result := all_permissions - deny_permissions
 }
 
 ######################################################################################################
 #                                       Permissões por unidade                                       #
 ######################################################################################################
 all_actions := union({action |
-    # Iterar sobre os tenants
-    tenant := data.tenants[_]
+	# Iterar sobre os tenants
+	customer := data.customers[_]
 
-    # Verificar permissões baseadas em roles
-    role := tenant.rolePermissions[_]
-    role_actions := {x | x := role.permissions[_]}
+	# Verificar permissões baseadas em roles
+	role := customer.rolePermissions[_]
+	role_actions := {x | x := role.permissions[_]}
 
-    # Verificar permissões customizadas nas unidades dos usuários
-    user := tenant.users[_]
-    unit := user.units[_]
+	# Verificar permissões customizadas nas unidades dos usuários
+	user := customer.users[_]
+	unit := user.units[_]
 
-    # Permissões personalizadas
-    custom_actions := {x | x := unit.custom_permissions[_]}
-#
-#     # Disallowances personalizadas
-    disallowances_actions := {x | x:= unit.custom_disallowances[_]}
+	# Permissões personalizadas
+	custom_actions := {x.action | x := unit.directPermissions[_]}
 
-    action := role_actions | custom_actions | disallowances_actions
+
+	action := (role_actions | custom_actions)
 })
 
 ######################################################################################################
@@ -199,9 +234,9 @@ all_actions := union({action |
 ######################################################################################################
 display_map := {unit_key: display_map |
 	unit_key := unit
-    unit_permissions := user_unit_permissions[unit]
-    display_map := {perm: allowed |
-        perm := all_actions[_]
-        allowed := perm in unit_permissions
-    }
+	unit_permissions := user_unit_permissions[unit]
+	display_map := {perm: allowed |
+		perm := all_actions[_]
+		allowed := perm in unit_permissions
+	}
 }
