@@ -240,3 +240,18 @@ display_map := {unit_key: display_map |
 		allowed := perm in unit_permissions
 	}
 }
+
+######################################################################################################
+#                                          Errors                                                    #
+######################################################################################################
+# Regra que retorna true se o usuário não for encontrado
+user_not_found if {
+    count({user | some customer in data.customers; some user in customer.users; user.uuid == input.user}) == 0
+}
+
+# Regra que retorna true se a unidade não for encontrada
+unit_not_found if {
+    count({unit | some customer in data.customers; some user in customer.users; user.uuid == input.user; some unit in user.units; unit.uuid == input.unit}) == 0
+}
+
+
