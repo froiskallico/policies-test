@@ -253,7 +253,7 @@ user_allowed_actions_for_object := {action |
         action := share_obj.customSharedActions[_]
     }
     
-    action := user_allowed_actions_for_object_thru_sharing_levels_by_group | user_allowed_actions_for_object_thru_sharing_levels_by_user | user_allowed_actions_for_object_thru_custom_level_by_user | user_allowed_actions_for_object_thru_custom_level_by_group
+	action := (user_allowed_actions_for_object_thru_sharing_levels_by_group | user_allowed_actions_for_object_thru_sharing_levels_by_user | user_allowed_actions_for_object_thru_custom_level_by_user | user_allowed_actions_for_object_thru_custom_level_by_group)[_]
 }
 
 
