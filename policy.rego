@@ -25,8 +25,10 @@ user_allow if {
 
 # Regra para verificar se o usuário é sysadmin
 user_is_sysadmin if {
-    customer := data.customers[input.customer]
-    user := customer.users[input.user]
+    customer := data.customers[_]
+    customer.uuid == input.customer
+    user := customer.users[_]
+    user.uuid == input.user
     user.sysadmin == true
 }
 
