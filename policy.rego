@@ -38,9 +38,7 @@ user_has_role_permission if {
     customer.uuid == input.customer
     user := customer.users[_]
     user.uuid == input.user
-    unit := user.units[_]
-    unit.uuid == input.unit
-    role := unit.roles[_]
+    role := user.role
     role_permission := customer.rolePermissions[_]
     role_permission.role == role
     input.action == role_permission.permissions[_]
@@ -55,9 +53,7 @@ user_has_custom_permission if {
     customer.uuid == input.customer
     user := customer.users[_]
     user.uuid == input.user
-    unit := user.units[_]
-    unit.uuid == input.unit
-    permission := unit.directPermissions[_]
+    permission := user.directPermissions[_]
     permission.action == input.action
     permission.effect == "allow"
 }
@@ -68,9 +64,7 @@ user_has_custom_disallowance if {
     customer.uuid == input.customer
     user := customer.users[_]
     user.uuid == input.user
-    unit := user.units[_]
-    unit.uuid == input.unit
-    permission := unit.directPermissions[_]
+    permission := user.directPermissions[_]
     permission.action == input.action
     permission.effect == "deny"
 }
