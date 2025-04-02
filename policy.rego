@@ -3,44 +3,66 @@ package goapice.check_user
 import rego.v1
 
 ######################################################################################################
-#                               Permissões Default (Com unidade especificada)                        #
+#                                           Utils Functions                                          #
+######################################################################################################
+
+customer_data(customerUuid) := result if {
+	customer := data.customers[customerUuid]
+    result := customer
+}
+
+user_data(userUuid) := result if {
+	customer := data.customers[input.customer]
+    user := customer.users[userUuid]
+    result := user
+}
+
+######################################################################################################
+#                                         Permissões Default                                         #
 ######################################################################################################
 
 default user_allow := false
 
 user_allow if {
     user_is_sysadmin
-    not user_has_custom_disallowance
 }
 
 user_allow if {
     user_has_role_permission
     not user_has_custom_disallowance
+    user_has_unit_permission
+}
+
+user_allow if {
+    user_has_role_permission
+    not user_has_custom_disallowance
+    not input.unit  # Caso unit não exista, não precisa verificar user_has_unit_permission
 }
 
 user_allow if {
     user_has_custom_permission
     not user_has_custom_disallowance
+    user_has_unit_permission
 }
+
+user_allow if {
+    user_has_custom_permission
+    not user_has_custom_disallowance
+    not input.unit  # Caso unit não exista, não precisa verificar user_has_unit_permission
+}
+
 
 # Regra para verificar se o usuário é sysadmin
 user_is_sysadmin if {
-    customer := data.customers[_]
-    customer.uuid == input.customer
-    user := customer.users[_]
-    user.uuid == input.user
+    user := user_data(input.user)
     user.sysadmin == true
 }
 
 # Verifica se o usuário tem uma permissão específica baseada no seu papel na unidade (role permission)
 user_has_role_permission if {
-    customer := data.customers[_]
-    customer.uuid == input.customer
-    user := customer.users[_]
-    user.uuid == input.user
+    user := user_data(input.user)
     role := user.role
-    role_permission := customer.rolePermissions[_]
-    role_permission.role == role
+    role_permission := customer_data(input.customer).rolePermissions[role]
     input.action == role_permission.permissions[_]
 }
 
@@ -49,62 +71,30 @@ user_has_role_permission if {
 ######################################################################################################
 # Verifica se o usuário tem uma permissão customizada em uma action específica
 user_has_custom_permission if {
-    customer := data.customers[_]
-    customer.uuid == input.customer
-    user := customer.users[_]
-    user.uuid == input.user
-    permission := user.directPermissions[_]
-    permission.action == input.action
+    user := user_data(input.user)
+    permission := user.directPermissions[input.action]
     permission.effect == "allow"
 }
 
 # Verifica se o usuário tem uma proibição customizada em uma action específica
 user_has_custom_disallowance if {
-    customer := data.customers[_]
-    customer.uuid == input.customer
-    user := customer.users[_]
-    user.uuid == input.user
-    permission := user.directPermissions[_]
-    permission.action == input.action
+    user := user_data(input.user)
+    permission := user.directPermissions[input.action]
     permission.effect == "deny"
 }
 
 ######################################################################################################
-#                               Permissões Default (Sem unidade especificada)                        #
+#                                  Permissão para unidade específica                                 #
 ######################################################################################################
-user_has_role_permission_in_any_unit if {
-    customer := data.customers[_]
-    customer.uuid == input.customer
-    user := customer.users[_]
-    user.uuid == input.user
-    unit := user.units[_]
-    user_role := unit.roles[_]
-    customer_role_permission := customer.rolePermissions[_]
-    customer_role_permission.role == user_role
-    permission := customer_role_permission.permissions[_]
-    permission == input.action
+default user_has_unit_permission := false
+
+user_has_unit_permission if {
+ 	check_unit_permission(input.user, input.unit)
 }
 
-user_has_custom_permission_in_any_unit if {
-    customer := data.customers[_]
-    customer.uuid == input.customer
-    user := customer.users[_]
-    user.uuid == input.user
-    unit := user.units[_]
-    permission := unit.directPermissions[_]
-    permission.action == input.action
-    permission.effect == "allow"
-}
-
-user_has_custom_disallowance_in_any_unit if {
-    customer := data.customers[_]
-    customer.uuid == input.customer
-    user := customer.users[_]
-    user.uuid == input.user
-    unit := user.units[_]
-    disallowance := unit.directPermissions[_]
-    disallowance.action == input.action
-    disallowance.effect == "deny"
+check_unit_permission(userUuid, unitUuid) if {
+    user_units := user_data(userUuid).units
+	user_units[unitUuid]
 }
 
 ######################################################################################################
