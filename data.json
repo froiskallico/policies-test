@@ -1,114 +1,96 @@
 {
-  "customers": [
-    {
+  "customers": {
+    "d9b4a034-8554-4c64-9e64-6d28493d29c6": {
       "id": 1,
-      "uuid": "d9b4a034-8554-4c64-9e64-6d28493d29c6",
       "name": "Supermercados Breithaupt",
-      "users": [
-        {
+      "users": {
+        "46c07187-8c19-41ae-8cd1-bd2ffb3bf550": {
           "id": 1,
-          "uuid": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
           "name": "Gabriel Silva",
           "sysadmin": true,
           "role": "Admin",
           "directPermissions": [],
           "groups": [],
-          "units": [
-            {
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
               "id": 1,
-              "uuid": "8a92a4fa-3194-469c-9138-abb601e4d68a",
               "name": "Fort Atacadista"
             }
-          ]
+          }
         },
-        {
+        "a98f7d83-4878-46a4-8d95-ebcd460690d5": {
           "id": 2,
-          "uuid": "a98f7d83-4878-46a4-8d95-ebcd460690d5",
           "name": "João Silva",
           "sysadmin": false,
           "role": "Gerente",
-          "directPermissions": [
-            {
-              "action": "golyzer.dashboards.delete",
+          "directPermissions": {
+            "golyzer.dashboards.delete": {
               "effect": "deny"
             }
-          ],
+          },
           "groups": [],
-          "units": [
-            {
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
               "id": 1,
-              "uuid": "8a92a4fa-3194-469c-9138-abb601e4d68a",
               "name": "Fort Atacadista"
             }
-          ]
+          }
         },
-        {
+        "b648e1eb-1627-4436-8b28-47d009e3c27e": {
           "id": 3,
-          "uuid": "b648e1eb-1627-4436-8b28-47d009e3c27e",
           "name": "Maria Silva",
           "sysadmin": false,
           "role": "Usuario",
-          "directPermissions": [
-            {
-              "action": "golyzer.dashboards.create",
+          "directPermissions": {
+            "golyzer.dashboards.create": {
               "effect": "allow"
             },
-            {
-              "action": "gonext.dre.report.view",
+            "gonext.dre.report.view": {
               "effect": "allow"
             },
-            {
-              "action": "gonext.dre.report.edit",
+            "gonext.dre.report.edit": {
               "effect": "deny"
             }
-          ],
+        },
           "groups": ["group.foo"],
-          "units": [
-            {
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
               "id": 1,
-              "uuid": "8a92a4fa-3194-469c-9138-abb601e4d68a",
               "name": "Fort Atacadista"
             }
-          ]
+          }
         },
-        {
+        "da8b6b20-38eb-46b6-86bd-9ac7a9defcee": {
           "id": 4,
-          "uuid": "da8b6b20-38eb-46b6-86bd-9ac7a9defcee",
           "name": "Carlos Santos",
           "sysadmin": false,
           "role": "Usuario",
-          "directPermissions": [
-            {
-              "action": "gonext.dre.report.view",
+          "directPermissions": {
+            "gonext.dre.report.view": {
               "effect": "allow"
             },
-            {
-              "action": "gonext.dre.report.delete",
+            "gonext.dre.report.delete": {
               "effect": "allow"
             }
-          ],
+          },
           "groups": ["group.bar","group.foo"],
-          "units": [
-            {
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
               "id": 1,
-              "uuid": "8a92a4fa-3194-469c-9138-abb601e4d68a",
               "name": "Fort Atacadista"
             },
-            {
+            "8a92a4fa-3194-469c-9138-abb601e4d68b": {
               "id": 2,
-              "uuid": "8a92a4fa-3194-469c-9138-abb601e4d68a",
               "name": "Fort Atacadista"
             }
-          ]
+          }
         }
-      ],
-      "rolePermissions": [
-        {
-          "role": "Admin",
+      },
+      "rolePermissions": {
+        "Admin": {
           "permissions": []
         },
-        {
-          "role": "Gerente",
+        "Gerente": {
           "permissions": [
             "golyzer.dashboards.view",
             "golyzer.dashboards.create",
@@ -117,21 +99,18 @@
             "gonext.dre.report.view"
           ]
         },
-        {
-          "role": "Usuario",
+        "Usuario": {
           "permissions": ["golyzer.dashboards.view"]
         }
-      ],
-      "groups": [
-        {
-          "uuid": "group.foo",
+      },
+      "groups": {
+        "group.foo": {
           "name": "Grupo 1"
         },
-        {
-          "uuid": "group.bar",
+        "group.bar": {
           "name": "Grupo 2"
         }
-      ],
+    },
       "sharingLevels": [
         {
           "module": "gonext.dre",
@@ -210,7 +189,7 @@
         }
       ]
     }
-  ],
+  },
   "actions": [
     {
       "identifier": "golyzer.dashboards.view",
