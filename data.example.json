@@ -1,0 +1,307 @@
+{
+  "customers": {
+    "d9b4a034-8554-4c64-9e64-6d28493d29c6": {
+      "id": 1,
+      "name": "Supermercados Breithaupt",
+      "users": {
+        "46c07187-8c19-41ae-8cd1-bd2ffb3bf550": {
+          "id": 1,
+          "name": "Gabriel Silva",
+          "sysadmin": true,
+          "role": "e50b5c03-381a-4002-a7e5-24301749ec68",
+          "directPermissions": [],
+          "groups": [],
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
+              "id": 1,
+              "name": "Fort Atacadista"
+            }
+          }
+        },
+        "a98f7d83-4878-46a4-8d95-ebcd460690d5": {
+          "id": 2,
+          "name": "João Silva",
+          "sysadmin": false,
+          "role": "b626cb09-b68d-45d2-a1f6-50a31b505865",
+          "directPermissions": {
+            "aa1fb85b-302d-490b-86f0-ecdd47c1676b": {
+              "effect": "deny"
+            }
+          },
+          "groups": [],
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
+              "id": 1,
+              "name": "Fort Atacadista"
+            }
+          }
+        },
+        "b648e1eb-1627-4436-8b28-47d009e3c27e": {
+          "id": 3,
+          "name": "Maria Silva",
+          "sysadmin": false,
+          "role": "4b804e10-64a3-4d20-904e-d137eba9cbaa",
+          "directPermissions": {
+            "42149d03-87e5-42c0-b1a4-84105e057988": {
+              "effect": "allow"
+            },
+            "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8": {
+              "effect": "allow"
+            },
+            "cbb8eb61-fd72-424e-b817-5c2ae5add9cb": {
+              "effect": "deny"
+            }
+          },
+          "groups": ["group.foo"],
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
+              "id": 1,
+              "name": "Fort Atacadista"
+            }
+          }
+        },
+        "da8b6b20-38eb-46b6-86bd-9ac7a9defcee": {
+          "id": 4,
+          "name": "Carlos Santos",
+          "sysadmin": false,
+          "role": "4b804e10-64a3-4d20-904e-d137eba9cbaa",
+          "directPermissions": {
+            "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8": {
+              "effect": "allow"
+            },
+            "4c041138-8f95-4b01-92dc-b953eb4ca438": {
+              "effect": "allow"
+            }
+          },
+          "groups": ["group.bar", "group.foo"],
+          "units": {
+            "8a92a4fa-3194-469c-9138-abb601e4d68a": {
+              "id": 1,
+              "name": "Fort Atacadista"
+            },
+            "8a92a4fa-3194-469c-9138-abb601e4d68b": {
+              "id": 2,
+              "name": "Fort Atacadista"
+            }
+          }
+        }
+      },
+      "rolePermissions": {
+        "e50b5c03-381a-4002-a7e5-24301749ec68": {
+          "name": "Admin",
+          "permissions": []
+        },
+        "b626cb09-b68d-45d2-a1f6-50a31b505865": {
+          "name": "Gerente",
+          "permissions": [
+            "176c5e8b-08c7-4e0e-ae40-84632681b44f",
+            "42149d03-87e5-42c0-b1a4-84105e057988",
+            "9f02115d-cb55-41d9-8a9a-dad0dbfc45bf",
+            "aa1fb85b-302d-490b-86f0-ecdd47c1676b",
+            "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8"
+          ]
+        },
+        "4b804e10-64a3-4d20-904e-d137eba9cbaa": {
+          "name": "Usuario",
+          "permissions": ["176c5e8b-08c7-4e0e-ae40-84632681b44f"]
+        }
+      },
+      "groups": {
+        "group.foo": {
+          "name": "Grupo 1"
+        },
+        "group.bar": {
+          "name": "Grupo 2"
+        }
+      },
+      "sharingLevels": [
+        {
+          "module": "gonext.dre",
+          "entity": "report",
+          "levels": [
+            {
+              "level": "view",
+              "actions": ["a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8"]
+            },
+            {
+              "level": "edit",
+              "actions": [
+                "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8",
+                "cbb8eb61-fd72-424e-b817-5c2ae5add9cb"
+              ]
+            },
+            {
+              "level": "delete",
+              "actions": [
+                "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8",
+                "cbb8eb61-fd72-424e-b817-5c2ae5add9cb",
+                "4c041138-8f95-4b01-92dc-b953eb4ca438"
+              ]
+            }
+          ]
+        }
+      ],
+      "sharing": [
+        {
+          "objectId": "object.foo",
+          "module": "gonext.dre",
+          "entity": "report",
+          "shares": [
+            {
+              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+              "toUser": "a98f7d83-4878-46a4-8d95-ebcd460690d5",
+              "toGroup": null,
+              "createdAt": "2025-01-01T13:00:00.00000",
+              "expirationDate": "2024-02-14T12:00:00.00000",
+              "sharingLevel": "view",
+              "customSharedActions": null
+            },
+            {
+              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+              "toUser": null,
+              "toGroup": "group.foo",
+              "createdAt": "2025-01-01T13:00:00.00000",
+              "expirationDate": "2024-02-14T12:00:00.00000",
+              "sharingLevel": "edit",
+              "customSharedActions": null
+            },
+            {
+              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+              "toUser": null,
+              "toGroup": "group.bar",
+              "createdAt": "2025-01-01T13:00:00.00000",
+              "expirationDate": "2024-02-14T12:00:00.00000",
+              "sharingLevel": "custom",
+              "customSharedActions": [
+                "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8",
+                "4c041138-8f95-4b01-92dc-b953eb4ca438"
+              ]
+            },
+            {
+              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+              "toUser": "b648e1eb-1627-4436-8b28-47d009e3c27e",
+              "toGroup": null,
+              "createdAt": "2025-01-01T13:00:00.00000",
+              "expirationDate": "2024-02-14T12:00:00.00000",
+              "sharingLevel": "custom",
+              "customSharedActions": ["4c041138-8f95-4b01-92dc-b953eb4ca438"]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "units": {
+    "8a92a4fa-3194-469c-9138-abb601e4d68a": {
+      "id": 1,
+      "name": "Fort Atacadista",
+      "solutions": {
+        "03a920e2-4939-45b9-87ef-836af270a370": {
+          "name": "Golyzer",
+          "modules": {
+            "d04937d1-c1a2-4a1b-a10d-6d55a4dd9f43": {
+              "identifier": "golyzer.dashboards",
+              "name": "Dashboards"
+            }
+          }
+        },
+        "4025d587-c13e-4a45-9583-a087f9b487ef": {
+          "name": "GoTime",
+          "modules": {
+            "6750d325-c358-44b8-9dcd-e70317eff126": {
+              "identifier": "gotime.schedule",
+              "name": "Escalas"
+            }
+          }
+        }
+      }
+    },
+    "8a92a4fa-3194-469c-9138-abb601e4d68b": {
+      "id": 2,
+      "name": "Fort Atacadista",
+      "solutions": {
+        "8af02f07-881a-49f8-800a-9c478d8b5f43": {
+          "name": "GoNext",
+          "modules": {
+            "e013f2fa-0895-4bd6-b2df-34761a4bbe95": {
+              "identifier": "gonext.dre",
+              "name": "DRE"
+            }
+          }
+        }
+      }
+    }
+  },
+  "actions": {
+    "176c5e8b-08c7-4e0e-ae40-84632681b44f": {
+      "identifier": "golyzer.dashboards.view",
+      "name": "View Dashboard",
+      "isSettings": false,
+      "solution": "03a920e2-4939-45b9-87ef-836af270a370",
+      "module": "d04937d1-c1a2-4a1b-a10d-6d55a4dd9f44"
+    },
+    "42149d03-87e5-42c0-b1a4-84105e057988": {
+      "identifier": "golyzer.dashboards.create",
+      "name": "Create Dashboard",
+      "isSettings": false,
+      "solution": "03a920e2-4939-45b9-87ef-836af270a370",
+      "module": "d04937d1-c1a2-4a1b-a10d-6d55a4dd9f43"
+    },
+    "9f02115d-cb55-41d9-8a9a-dad0dbfc45bf": {
+      "identifier": "golyzer.dashboards.edit",
+      "name": "Edit Dashboard",
+      "isSettings": false,
+      "solution": "03a920e2-4939-45b9-87ef-836af270a370",
+      "module": "d04937d1-c1a2-4a1b-a10d-6d55a4dd9f43"
+    },
+    "aa1fb85b-302d-490b-86f0-ecdd47c1676b": {
+      "identifier": "golyzer.dashboards.delete",
+      "name": "Delete Dashboard",
+      "isSettings": false,
+      "solution": "03a920e2-4939-45b9-87ef-836af270a370",
+      "module": "d04937d1-c1a2-4a1b-a10d-6d55a4dd9f43"
+    },
+    "4677f233-4fd5-46f6-9589-fdb22ed174e2": {
+      "identifier": "golyzer.dashboards.share",
+      "name": "Share Dashboard",
+      "isSettings": false,
+      "solution": "03a920e2-4939-45b9-87ef-836af270a370",
+      "module": "d04937d1-c1a2-4a1b-a10d-6d55a4dd9f43"
+    },
+    "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8": {
+      "identifier": "gonext.dre.report.view",
+      "name": "View DRE Report",
+      "isSettings": false,
+      "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+      "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95"
+    },
+    "52ce2b01-59b6-4239-a676-37cc6bbbee79": {
+      "identifier": "gonext.dre.report.create",
+      "name": "Create DRE Report",
+      "isSettings": false,
+      "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+      "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95"
+    },
+    "cbb8eb61-fd72-424e-b817-5c2ae5add9cb": {
+      "identifier": "gonext.dre.report.edit",
+      "name": "Edit DRE Report",
+      "isSettings": false,
+      "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+      "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95"
+    },
+    "4c041138-8f95-4b01-92dc-b953eb4ca438": {
+      "identifier": "gonext.dre.report.delete",
+      "name": "Delete DRE Report",
+      "isSettings": false,
+      "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+      "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95"
+    },
+    "156d31d0-5aed-4009-8365-f43d4696f106": {
+      "identifier": "gonext.dre.report.share",
+      "name": "Share DRE Report",
+      "isSettings": false,
+      "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+      "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95"
+    }
+  }
+}
