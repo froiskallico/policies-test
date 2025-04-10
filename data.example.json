@@ -9,7 +9,7 @@
           "name": "Gabriel Silva",
           "sysadmin": true,
           "role": "e50b5c03-381a-4002-a7e5-24301749ec68",
-          "directPermissions": [],
+          "directPermissions": {},
           "groups": [],
           "units": {
             "8a92a4fa-3194-469c-9138-abb601e4d68a": {
