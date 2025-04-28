@@ -16,7 +16,8 @@
               "id": 1,
               "name": "Fort Atacadista"
             }
-          }
+          },
+          "sharings": []
         },
         "a98f7d83-4878-46a4-8d95-ebcd460690d5": {
           "id": 2,
@@ -34,7 +35,9 @@
               "id": 1,
               "name": "Fort Atacadista"
             }
-          }
+          },
+          "sharings": ["f9945d48-1783-4ce4-95be-7634545f94e2"]
+
         },
         "b648e1eb-1627-4436-8b28-47d009e3c27e": {
           "id": 3,
@@ -50,15 +53,19 @@
             },
             "cbb8eb61-fd72-424e-b817-5c2ae5add9cb": {
               "effect": "deny"
+            },
+            "4c041138-8f95-4b01-92dc-b953eb4ca438": {
+              "effect": "allow"
             }
           },
-          "groups": ["group.foo"],
+          "groups": ["6a936c06-b0dc-4475-afba-4f69e8082ab9"],
           "units": {
             "8a92a4fa-3194-469c-9138-abb601e4d68a": {
               "id": 1,
               "name": "Fort Atacadista"
             }
-          }
+          },
+          "sharings": ["4a5d7403-e84e-46e4-b893-5b71d9883ff1"]
         },
         "da8b6b20-38eb-46b6-86bd-9ac7a9defcee": {
           "id": 4,
@@ -73,7 +80,7 @@
               "effect": "allow"
             }
           },
-          "groups": ["group.bar", "group.foo"],
+          "groups": ["4f7d85bf-41a4-4c64-86fe-c3888b8aee01", "6a936c06-b0dc-4475-afba-4f69e8082ab9"],
           "units": {
             "8a92a4fa-3194-469c-9138-abb601e4d68a": {
               "id": 1,
@@ -83,7 +90,8 @@
               "id": 2,
               "name": "Fort Atacadista"
             }
-          }
+          },
+          "sharings": []
         }
       },
       "rolePermissions": {
@@ -107,88 +115,61 @@
         }
       },
       "groups": {
-        "group.foo": {
-          "name": "Grupo 1"
+        "6a936c06-b0dc-4475-afba-4f69e8082ab9": {
+          "name": "Grupo 1",
+          "sharings": ["c5930471-757e-4d48-aaf0-58ab5b182b5b"]
         },
-        "group.bar": {
-          "name": "Grupo 2"
+        "4f7d85bf-41a4-4c64-86fe-c3888b8aee01": {
+          "name": "Grupo 2",
+          "sharings": ["2d4b00fa-52aa-4a06-afca-f8433c7c49d3"]
         }
       },
-      "sharingLevels": [
-        {
-          "module": "gonext.dre",
+      "sharing": {
+        "f9945d48-1783-4ce4-95be-7634545f94e2": {
+          "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+          "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95",
           "entity": "report",
-          "levels": [
-            {
-              "level": "view",
-              "actions": ["a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8"]
-            },
-            {
-              "level": "edit",
-              "actions": [
-                "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8",
-                "cbb8eb61-fd72-424e-b817-5c2ae5add9cb"
-              ]
-            },
-            {
-              "level": "delete",
-              "actions": [
-                "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8",
-                "cbb8eb61-fd72-424e-b817-5c2ae5add9cb",
-                "4c041138-8f95-4b01-92dc-b953eb4ca438"
-              ]
-            }
-          ]
-        }
-      ],
-      "sharing": [
-        {
-          "objectId": "object.foo",
-          "module": "gonext.dre",
+          "objectUuid": "0b0ea52e-33cf-44df-910c-47e30e5477b8",
+          "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+          "toUser": "a98f7d83-4878-46a4-8d95-ebcd460690d5",
+          "toGroup": null,
+          "createdAt": "2025-01-01T13:00:00.00000",
+          "expirationDate": "2024-02-14T12:00:00.00000"
+        },
+        "c5930471-757e-4d48-aaf0-58ab5b182b5b": {
+          "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+          "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95",
           "entity": "report",
-          "shares": [
-            {
-              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
-              "toUser": "a98f7d83-4878-46a4-8d95-ebcd460690d5",
-              "toGroup": null,
-              "createdAt": "2025-01-01T13:00:00.00000",
-              "expirationDate": "2024-02-14T12:00:00.00000",
-              "sharingLevel": "view",
-              "customSharedActions": null
-            },
-            {
-              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
-              "toUser": null,
-              "toGroup": "group.foo",
-              "createdAt": "2025-01-01T13:00:00.00000",
-              "expirationDate": "2024-02-14T12:00:00.00000",
-              "sharingLevel": "edit",
-              "customSharedActions": null
-            },
-            {
-              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
-              "toUser": null,
-              "toGroup": "group.bar",
-              "createdAt": "2025-01-01T13:00:00.00000",
-              "expirationDate": "2024-02-14T12:00:00.00000",
-              "sharingLevel": "custom",
-              "customSharedActions": [
-                "a8bbe8c4-02e5-46d3-8324-e38e0a0fd1e8",
-                "4c041138-8f95-4b01-92dc-b953eb4ca438"
-              ]
-            },
-            {
-              "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
-              "toUser": "b648e1eb-1627-4436-8b28-47d009e3c27e",
-              "toGroup": null,
-              "createdAt": "2025-01-01T13:00:00.00000",
-              "expirationDate": "2024-02-14T12:00:00.00000",
-              "sharingLevel": "custom",
-              "customSharedActions": ["4c041138-8f95-4b01-92dc-b953eb4ca438"]
-            }
-          ]
+          "objectUuid": "0b0ea52e-33cf-44df-910c-47e30e5477b8",
+          "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+          "toUser": null,
+          "toGroup": "6a936c06-b0dc-4475-afba-4f69e8082ab9",
+          "createdAt": "2025-01-01T13:00:00.00000",
+          "expirationDate": "2024-02-14T12:00:00.00000"
+        },
+        "2d4b00fa-52aa-4a06-afca-f8433c7c49d3": {
+          "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+          "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95",
+          "entity": "report",
+          "objectUuid": "0b0ea52e-33cf-44df-910c-47e30e5477b8",
+          "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+          "toUser": null,
+          "toGroup": "4f7d85bf-41a4-4c64-86fe-c3888b8aee01",
+          "createdAt": "2025-01-01T13:00:00.00000",
+          "expirationDate": "2024-02-14T12:00:00.00000"
+        },
+        "4a5d7403-e84e-46e4-b893-5b71d9883ff1": {
+          "solution": "8af02f07-881a-49f8-800a-9c478d8b5f43",
+          "module": "e013f2fa-0895-4bd6-b2df-34761a4bbe95",
+          "entity": "report",
+          "objectUuid": "0b0ea52e-33cf-44df-910c-47e30e5477b8",
+          "fromUser": "46c07187-8c19-41ae-8cd1-bd2ffb3bf550",
+          "toUser": "b648e1eb-1627-4436-8b28-47d009e3c27e",
+          "toGroup": null,
+          "createdAt": "2025-01-01T13:00:00.00000",
+          "expirationDate": "2024-02-14T12:00:00.00000"
         }
-      ]
+      }
     }
   },
   "units": {
