@@ -193,6 +193,7 @@ sharing := result if {
 		"user_allow":  user_can_perform_action_in_shared_object(input.user, input.object),
 		"user_direct_accessible_objects": user_direct_accessible_objects(input.user),
 		"user_group_accessible_objects": user_group_accessible_objects(input.user),
+        "user_role_group_accessible_objects": user_role_group_accessible_objects(input.user),
 		"all_user_accessible_objects": all_user_accessible_objects(input.user),
         "user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectUuid}
 	}
@@ -214,12 +215,27 @@ user_direct_accessible_objects(userUuid) := {key: obj |
 
 # Quais objetos o usuário tem acesso através de grupos
 user_group_accessible_objects(userUuid) := {key: obj |
-	user_groups = user_data(userUuid).groups[_]
-    customer := customer_data(input.customer)
-    group_sharings = customer.groups[user_groups].sharings[_]
-    key := group_sharings
-	obj := customer.sharing[group_sharings]
+    user_group := user_data(userUuid).groups[_]
+	customer := customer_data(input.customer)
+    some key
+    sharing := customer.sharing[key]
+	user_group in sharing.groups
+    not userUuid in sharing.groupExceptions
+    obj := sharing
+}
+
+user_role_group_accessible_objects(userUuid) := {sharing_key: obj |
+	user_role := user_data(userUuid).role
+  	customer := customer_data(input.customer)
+    some sharing_key
+    sharing := customer.sharing[sharing_key]
+    some group_key
+    group := customer.groups[group_key]
+	user_role in group.roles
+    group_key in sharing.groups
+    not userUuid in sharing.groupExceptions
+    obj := sharing
 }
 
 # Todos objetos aos quais o usuário tem acesso
-all_user_accessible_objects(userUuid) := object.union(user_direct_accessible_objects(userUuid), user_group_accessible_objects(userUuid))
+all_user_accessible_objects(userUuid) := object.union(user_direct_accessible_objects(userUuid), user_group_accessible_objects(userUuid), user_role_group_accessible_objects)
