@@ -25,7 +25,6 @@ check_user_has_role_permission(action) if {
 	action in role_permission.permissions
 }
 
-
 ######### CAN PERFORM #########
 can_user_perform_action_via_role(action) if {
 	check_user_has_role_permission(action)
@@ -37,8 +36,8 @@ can_user_perform_action_via_role(action) if {
 	check_user_has_role_permission(action)
 	not check_user_has_custom_disallowance(action)
 	user_has_unit_permission
-    unit_has_solution
-    user_has_module_unit_access
+	unit_has_solution
+	user_has_module_unit_access
 }
 
 can_user_perform_action_via_custom(action) if {
@@ -51,8 +50,8 @@ can_user_perform_action_via_custom(action) if {
 	check_user_has_custom_permission(action)
 	not check_user_has_custom_disallowance(action)
 	user_has_unit_permission
-    unit_has_solution
-    user_has_module_unit_access
+	unit_has_solution
+	user_has_module_unit_access
 }
 
 can_user_perform_action(action) if {
@@ -125,7 +124,7 @@ check_unit_permission(userUuid, unitUuid) if {
 ######################################################################################################
 unit_has_solution := false if {
 	has_unit
-    not check_unit_has_solution(input.unit, input.action)
+	not check_unit_has_solution(input.unit, input.action)
 }
 
 unit_has_solution if {
@@ -145,7 +144,7 @@ check_unit_has_solution(unitUuid, actionUuid) := result if {
 ######################################################################################################
 user_has_module_unit_access := false if {
 	has_unit
-    not check_user_has_module_and_unit_access(input.unit, input.action)
+	not check_user_has_module_and_unit_access(input.unit, input.action)
 }
 
 user_has_module_unit_access if {
@@ -155,17 +154,17 @@ user_has_module_unit_access if {
 
 check_user_has_module_and_unit_access(unitUuid, actionUuid) if {
 	user_has_unit_permission
-    unit_has_solution
-    check_unit_has_module(unitUuid, actionUuid)
+	unit_has_solution
+	check_unit_has_module(unitUuid, actionUuid)
 }
 
 check_unit_has_module(unitUuid, actionUuid) := result if {
-	unit := data.units[unitUuid]	
-    action_solution_uuid := data.actions[actionUuid].solution
+	unit := data.units[unitUuid]
+	action_solution_uuid := data.actions[actionUuid].solution
 	solution_modules := unit.solutions[action_solution_uuid].modules
-    solution_modules_ids := [uuid | uuid := key; _ := solution_modules[key]]
-    action_module_uuid := data.actions[actionUuid].module
-    result := action_module_uuid in solution_modules_ids
+	solution_modules_ids := [uuid | uuid := key; _ := solution_modules[key]]
+	action_module_uuid := data.actions[actionUuid].module
+	result := action_module_uuid in solution_modules_ids
 }
 
 # ######################################################################################################
@@ -190,60 +189,59 @@ display_map := {action: allowed |
 sharing := result if {
 	input.object
 	result := {
-# 		"user_allow":  user_can_perform_action_in_shared_object(input.user, input.object),
+		"user_allow": user_can_perform_action_in_shared_object(input.user, input.object),
 		"user_direct_accessible_objects": user_direct_accessible_objects(input.user),
 		"user_group_accessible_objects": user_group_accessible_objects(input.user),
-        "user_role_group_accessible_objects": user_role_group_accessible_objects(input.user),
-# 		"all_user_accessible_objects": all_user_accessible_objects(input.user),
-#         "user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectUuid}
+		"user_role_group_accessible_objects": user_role_group_accessible_objects(input.user),
+		"all_user_accessible_objects": all_user_accessible_objects(input.user),
+		"user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectUuid},
 	}
 }
 
-
 # Usuario pode executar ação em objeto compartilhado se
-# user_can_perform_action_in_shared_object(userUuid, objectUuid) if {
-# 	user_allow
-#     objectUuid in {x | x := all_user_accessible_objects(userUuid)[_].objectUuid} 
-# }
+user_can_perform_action_in_shared_object(userUuid, objectUuid) if {
+	user_allow
+	objectUuid in {x | x := all_user_accessible_objects(userUuid)[_].objectUuid}
+}
 
 # Quais objetos um usuário tem acesso direto
-user_direct_accessible_objects(userUuid) := {key: obj |
+user_direct_accessible_objects(userUuid) := {sharing_key: obj |
 	user_sharings := user_data(userUuid).sharings[_]
-    key := user_sharings
+	sharing_key := user_sharings
 	obj := customer_data(input.customer).sharing[user_sharings]
 }
 
 # Quais objetos o usuário tem acesso através de grupos
-user_group_accessible_objects(userUuid) := {key: obj |
-    user_group := user_data(userUuid).groups[_]
+user_group_accessible_objects(userUuid) := {sharing_key: obj |
+	user_group := user_data(userUuid).groups[_]
 	customer := customer_data(input.customer)
-    some key
-    sharing := customer.sharing[key]
+	some sharing_key
+	sharing := customer.sharing[sharing_key]
 	user_group in sharing.groups
-    not userUuid in sharing.groupExceptions
-    obj := sharing
+	not userUuid in sharing.groupExceptions
+	obj := sharing
 }
 
 user_role_group_accessible_objects(userUuid) := {sharing_key: obj |
 	user_role := user_data(userUuid).role
-  	customer := customer_data(input.customer)
-    some sharing_key
-    sharing := customer.sharing[sharing_key]
-    some group_key
-    group := customer.groups[group_key]
+	customer := customer_data(input.customer)
+	some sharing_key
+	sharing := customer.sharing[sharing_key]
+	some group_key
+	group := customer.groups[group_key]
 	user_role in group.roles
-    group_key in sharing.groups
-    not userUuid in sharing.groupExceptions
-    obj := sharing
+	group_key in sharing.groups
+	not userUuid in sharing.groupExceptions
+	obj := sharing
 }
 
-# direct_and_group_accessible_objects(userUuid) := object.union(
-# 	user_direct_accessible_objects(userUuid),
-# 	user_group_accessible_objects(userUuid),
-# )
-# 
-# # Todos objetos aos quais o usuário tem acesso
-# all_user_accessible_objects(userUuid) := object.union(
-# 	direct_and_group_accessible_objects(userUuid),
-# 	user_role_group_accessible_objects(userUuid),
-# )
+direct_and_group_accessible_objects(userUuid) := object.union(
+	user_direct_accessible_objects(userUuid),
+	user_group_accessible_objects(userUuid),
+)
+
+# Todos objetos aos quais o usuário tem acesso
+all_user_accessible_objects(userUuid) := object.union(
+	direct_and_group_accessible_objects(userUuid),
+	user_role_group_accessible_objects(userUuid),
+)
