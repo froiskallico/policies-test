@@ -190,21 +190,21 @@ display_map := {action: allowed |
 sharing := result if {
 	input.object
 	result := {
-		"user_allow":  user_can_perform_action_in_shared_object(input.user, input.object),
+# 		"user_allow":  user_can_perform_action_in_shared_object(input.user, input.object),
 		"user_direct_accessible_objects": user_direct_accessible_objects(input.user),
 		"user_group_accessible_objects": user_group_accessible_objects(input.user),
         "user_role_group_accessible_objects": user_role_group_accessible_objects(input.user),
-		"all_user_accessible_objects": all_user_accessible_objects(input.user),
-        "user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectUuid}
+# 		"all_user_accessible_objects": all_user_accessible_objects(input.user),
+#         "user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectUuid}
 	}
 }
 
 
 # Usuario pode executar ação em objeto compartilhado se
-user_can_perform_action_in_shared_object(userUuid, objectUuid) if {
-	user_allow
-    objectUuid in {x | x := all_user_accessible_objects(userUuid)[_].objectUuid} 
-}
+# user_can_perform_action_in_shared_object(userUuid, objectUuid) if {
+# 	user_allow
+#     objectUuid in {x | x := all_user_accessible_objects(userUuid)[_].objectUuid} 
+# }
 
 # Quais objetos um usuário tem acesso direto
 user_direct_accessible_objects(userUuid) := {key: obj |
@@ -237,13 +237,13 @@ user_role_group_accessible_objects(userUuid) := {sharing_key: obj |
     obj := sharing
 }
 
-direct_and_group_accessible_objects(userUuid) := object.union(
-	user_direct_accessible_objects(userUuid),
-	user_group_accessible_objects(userUuid),
-)
-
-# Todos objetos aos quais o usuário tem acesso
-all_user_accessible_objects(userUuid) := object.union(
-	direct_and_group_accessible_objects(userUuid),
-	user_role_group_accessible_objects(userUuid),
-)
+# direct_and_group_accessible_objects(userUuid) := object.union(
+# 	user_direct_accessible_objects(userUuid),
+# 	user_group_accessible_objects(userUuid),
+# )
+# 
+# # Todos objetos aos quais o usuário tem acesso
+# all_user_accessible_objects(userUuid) := object.union(
+# 	direct_and_group_accessible_objects(userUuid),
+# 	user_role_group_accessible_objects(userUuid),
+# )
