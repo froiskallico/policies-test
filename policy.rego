@@ -235,13 +235,8 @@ user_role_group_accessible_objects(userUuid) := {sharing_key: obj |
 	obj := sharing
 }
 
-direct_and_group_accessible_objects(userUuid) := object.union(
-	user_direct_accessible_objects(userUuid),
-	user_group_accessible_objects(userUuid),
-)
-
 # Todos objetos aos quais o usuário tem acesso
 all_user_accessible_objects(userUuid) := object.union(
-	direct_and_group_accessible_objects(userUuid),
-	user_role_group_accessible_objects(userUuid),
+	user_direct_accessible_objects(userUuid),
+	user_group_accessible_objects(userUuid),
 )
