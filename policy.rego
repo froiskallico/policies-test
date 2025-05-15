@@ -195,21 +195,21 @@ sharing := result if {
 		"user_group_accessible_objects": user_group_accessible_objects(input.user),
 		"user_role_group_accessible_objects": user_role_group_accessible_objects(input.user),
 		"all_user_accessible_objects": all_user_accessible_objects(input.user),
-		"user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectUuid},
+		"user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectId},
 	}
 }
 
 # Usuario pode executar ação em objeto compartilhado se
-user_can_perform_action_in_shared_object(userUuid, objectUuid) if {
+user_can_perform_action_in_shared_object(userUuid, objectId) if {
 	user_allow
-	objectUuid in {x | x := all_user_accessible_objects(userUuid)[_].objectUuid}
+	objectId in {x | x := all_user_accessible_objects(userUuid)[_].objectId}
 }
 
 # Quais objetos um usuário tem acesso direto
 user_direct_accessible_objects(userUuid) := {sharing_key: obj |
-	user_sharings := user_data(userUuid).sharings[_]
-	sharing_key := user_sharings
-	obj := customer_data(input.customer).sharing[user_sharings]
+	customer_sharing := customer_data(input.customer).sharing[sharing_key]
+    userUuid in customer_sharing.users
+    obj := customer_sharing
 }
 
 # Quais objetos o usuário tem acesso através de grupos
@@ -236,8 +236,13 @@ user_role_group_accessible_objects(userUuid) := {sharing_key: obj |
 	obj := sharing
 }
 
+direct_and_group_accessible_objects(userUuid) := object.union(
+	user_direct_accessible_objects(userUuid),
+	user_group_accessible_objects(userUuid),
+)
+
 # Todos objetos aos quais o usuário tem acesso
 all_user_accessible_objects(userUuid) := object.union(
-	user_direct_accessible_objects(userUuid),
+	direct_and_group_accessible_objects(userUuid),
 	user_group_accessible_objects(userUuid),
 )
