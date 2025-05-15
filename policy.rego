@@ -7,12 +7,12 @@ import rego.v1
 ######################################################################################################
 
 customer_data(customerUuid) := result if {
-	customer := data.data.customers[customerUuid]
+	customer := data.customers[customerUuid]
 	result := customer
 }
 
 user_data(userUuid) := result if {
-	customer := data.data.customers[input.customer]
+	customer := data.customers[input.customer]
 	user := customer.users[userUuid]
 	result := user
 }
@@ -133,8 +133,8 @@ unit_has_solution if {
 }
 
 check_unit_has_solution(unitUuid, actionUuid) := result if {
-	unit := data.data.units[unitUuid]
-	action_solution_uuid := data.data.actions[actionUuid].solution
+	unit := data.units[unitUuid]
+	action_solution_uuid := data.actions[actionUuid].solution
 	unit_solutions_ids := [uuid | uuid := key; _ := unit.solutions[key]]
 	result := action_solution_uuid in unit_solutions_ids
 }
@@ -159,11 +159,11 @@ check_user_has_module_and_unit_access(unitUuid, actionUuid) if {
 }
 
 check_unit_has_module(unitUuid, actionUuid) := result if {
-	unit := data.data.units[unitUuid]
-	action_solution_uuid := data.data.actions[actionUuid].solution
+	unit := data.units[unitUuid]
+	action_solution_uuid := data.actions[actionUuid].solution
 	solution_modules := unit.solutions[action_solution_uuid].modules
 	solution_modules_ids := [uuid | uuid := key; _ := solution_modules[key]]
-	action_module_uuid := data.data.actions[actionUuid].module
+	action_module_uuid := data.actions[actionUuid].module
 	result := action_module_uuid in solution_modules_ids
 }
 
@@ -171,7 +171,7 @@ check_unit_has_module(unitUuid, actionUuid) := result if {
 # #                                        Permissões do Usuário                                       #
 # ######################################################################################################
 user_allowed_actions := [action |
-	action := [uuid | uuid := key; _ := data.data.actions[key]][_]
+	action := [uuid | uuid := key; _ := data.actions[key]][_]
 	can_user_perform_action(action)
 ]
 
@@ -179,7 +179,7 @@ user_allowed_actions := [action |
 # #                                       Display Map                                                  #
 # ######################################################################################################
 display_map := {action: allowed |
-	action := [uuid | uuid := key; _ := data.data.actions[key]][_]
+	action := [uuid | uuid := key; _ := data.actions[key]][_]
 	allowed := action in user_allowed_actions
 }
 
