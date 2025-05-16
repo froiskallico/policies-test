@@ -18,58 +18,59 @@ user_data(userUuid) := result if {
 }
 
 # Verifica se o usuário tem uma permissão específica baseada no seu papel na unidade (role permission)
-check_user_has_role_permission(action) if {
-	user := user_data(input.user)
+check_user_has_role_permission(userUuid, action) if {
+	user := user_data(userUuid)
 	role := user.role
 	role_permission := customer_data(input.customer).rolePermissions[role]
 	action in role_permission.permissions
 }
 
 ######### CAN PERFORM #########
-can_user_perform_action_via_role(action) if {
-	check_user_has_role_permission(action)
-	not check_user_has_custom_disallowance(action)
+can_user_perform_action_via_role(userUuid, action) if {
+	check_user_has_role_permission(userUuid, action)
+	not check_user_has_custom_disallowance(userUuid, action)
 	not has_unit
 }
 
-can_user_perform_action_via_role(action) if {
-	check_user_has_role_permission(action)
-	not check_user_has_custom_disallowance(action)
+can_user_perform_action_via_role(userUuid, action) if {
+	check_user_has_role_permission(userUuid, action)
+	not check_user_has_custom_disallowance(userUuid, action)
 	user_has_unit_permission
 	unit_has_solution
 	user_has_module_unit_access
 }
 
-can_user_perform_action_via_custom(action) if {
-	check_user_has_custom_permission(action)
-	not check_user_has_custom_disallowance(action)
+can_user_perform_action_via_custom(userUuid, action) if {
+	check_user_has_custom_permission(userUuid, action)
+	not check_user_has_custom_disallowance(userUuid, action)
 	not has_unit
 }
 
-can_user_perform_action_via_custom(action) if {
-	check_user_has_custom_permission(action)
-	not check_user_has_custom_disallowance(action)
+can_user_perform_action_via_custom(userUuid, action) if {
+	check_user_has_custom_permission(userUuid, action)
+	not check_user_has_custom_disallowance(userUuid, action)
 	user_has_unit_permission
 	unit_has_solution
 	user_has_module_unit_access
 }
 
-can_user_perform_action(action) if {
-	can_user_perform_action_via_role(action)
+can_user_perform_action(userUuid, action) if {
+	can_user_perform_action_via_role(userUuid, action)
 }
 
-can_user_perform_action(action) if {
-	can_user_perform_action_via_custom(action)
+can_user_perform_action(userUuid, action) if {
+	can_user_perform_action_via_custom(userUuid, action)
 }
 
-can_user_perform_action(action) if {
-	action==action
-    user_is_sysadmin
+can_user_perform_action(userUuid, action) if {
+	action == action
+	userUuid == userUuid
+	user_is_sysadmin(userUuid)
 }
 
 # Regra para verificar se o usuário é sysadmin
-user_is_sysadmin if {
-	user := user_data(input.user)
+user_is_sysadmin(userUuid) if {
+	user := user_data(userUuid)
 	user.sysadmin == true
 }
 
@@ -79,15 +80,15 @@ has_unit := input.unit != null
 #        Permissões/Proibições custom          #
 ################################################
 # Verifica se o usuário tem uma permissão customizada em uma action específica
-check_user_has_custom_permission(action) if {
-	user := user_data(input.user)
+check_user_has_custom_permission(userUuid, action) if {
+	user := user_data(userUuid)
 	permission := user.directPermissions[action]
 	permission.effect == "allow"
 }
 
 # Verifica se o usuário tem uma proibição customizada em uma action específica
-check_user_has_custom_disallowance(action) if {
-	user := user_data(input.user)
+check_user_has_custom_disallowance(userUuid, action) if {
+	user := user_data(userUuid)
 	permission := user.directPermissions[action]
 	permission.effect == "deny"
 }
@@ -98,12 +99,19 @@ check_user_has_custom_disallowance(action) if {
 
 default user_allow := false
 
-user_allow if user_is_sysadmin
-user_allow if can_user_perform_action(input.action)
+user_allow if {
+	input.user
+	user_is_sysadmin(input.user)
+}
 
-user_has_role_permission if check_user_has_role_permission(input.action)
-user_has_custom_permission if check_user_has_custom_permission(input.action)
-user_has_custom_disallowance if check_user_has_custom_disallowance(input.action)
+user_allow if {
+	input.user
+	can_user_perform_action(input.user, input.action)
+}
+
+user_has_role_permission if check_user_has_role_permission(input.user, input.action)
+user_has_custom_permission if check_user_has_custom_permission(input.user, input.action)
+user_has_custom_disallowance if check_user_has_custom_disallowance(input.user, input.action)
 
 ######################################################################################################
 #                                  Permissão para unidade específica                                 #
@@ -174,19 +182,30 @@ check_unit_has_module(unitUuid, actionUuid) := result if {
 # ######################################################################################################
 # #                                        Permissões do Usuário                                       #
 # ######################################################################################################
-user_allowed_actions := [action |
+user_allowed_actions := result if {
+	not input.usersList
+	input.user
+	result := check_user_allowed_actions(input.user)
+}
+
+check_user_allowed_actions(userUuid) := [action |
 	action := [uuid | uuid := key; _ := data.actions[key]][_]
-	can_user_perform_action(action)
+	can_user_perform_action(userUuid, action)
 ]
 
 # ######################################################################################################
 # #                                       Display Map                                                  #
 # ######################################################################################################
-display_map := {action: allowed |
-	action := [uuid | uuid := key; _ := data.actions[key]][_]
-	allowed := action in user_allowed_actions
+display_map := result if {
+	not input.usersList
+	input.user
+	result := get_display_map(input.user)
 }
 
+get_display_map(userUuid) := {action: allowed |
+	action := [uuid | uuid := key; _ := data.actions[key]][_]
+	allowed := action in check_user_allowed_actions(userUuid)
+}
 
 ######################################################################################################
 #                          Regras Relacionadas a Compartilhamento de Objetos                         #
@@ -212,8 +231,8 @@ user_can_perform_action_in_shared_object(userUuid, objectId) if {
 # Quais objetos um usuário tem acesso direto
 user_direct_accessible_objects(userUuid) := {sharing_key: obj |
 	customer_sharing := customer_data(input.customer).sharing[sharing_key]
-    userUuid in customer_sharing.users
-    obj := customer_sharing
+	userUuid in customer_sharing.users
+	obj := customer_sharing
 }
 
 # Quais objetos o usuário tem acesso através de grupos
@@ -251,3 +270,14 @@ all_user_accessible_objects(userUuid) := object.union(
 	user_group_accessible_objects(userUuid),
 )
 
+######################################################################################################
+#                                              UsersList                                             #
+######################################################################################################
+allowed_users_list := result if {
+	input.usersList
+	not input.user
+	result := {userUuid |
+		userUuid := input.usersList[_]
+		can_user_perform_action(userUuid, input.action)
+	}
+}
