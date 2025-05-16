@@ -62,6 +62,11 @@ can_user_perform_action(action) if {
 	can_user_perform_action_via_custom(action)
 }
 
+can_user_perform_action(action) if {
+	action==action
+    user_is_sysadmin
+}
+
 # Regra para verificar se o usuário é sysadmin
 user_is_sysadmin if {
 	user := user_data(input.user)
@@ -94,7 +99,6 @@ check_user_has_custom_disallowance(action) if {
 default user_allow := false
 
 user_allow if user_is_sysadmin
-
 user_allow if can_user_perform_action(input.action)
 
 user_has_role_permission if check_user_has_role_permission(input.action)
@@ -246,3 +250,4 @@ all_user_accessible_objects(userUuid) := object.union(
 	direct_and_group_accessible_objects(userUuid),
 	user_group_accessible_objects(userUuid),
 )
+
