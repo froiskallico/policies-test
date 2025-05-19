@@ -1,0 +1,3168 @@
+{
+        "actions": {
+            "00fe2f36-4e61-4f53-8b00-8fd742efb7f8": {
+                "identifier": "gonext:demonstrativorazao:duplicarrazaocompartilhado",
+                "isSettings": false,
+                "module": "173034d2-d7fe-4c2b-8fe4-106e6db1fe0c",
+                "name": "Duplicar razão compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "088394ca-8baf-4c46-83ed-d59a96668416": {
+                "identifier": "gonext:demonstrativoderesultadosdoexercicio:editardrecompartilhado",
+                "isSettings": false,
+                "module": "75afd653-234c-4436-9079-caf819f445e6",
+                "name": "Editar DRE compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "1e51c327-5582-4fa8-8562-2b932dedfa61": {
+                "identifier": "gonext:demonstrativoderesultadosdoexercicio:editardre",
+                "isSettings": false,
+                "module": "75afd653-234c-4436-9079-caf819f445e6",
+                "name": "Editar DRE",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "22316b3d-54b4-4916-b596-944633c32c89": {
+                "identifier": "gonext:demonstrativoderesultadosdoexercicio:criardre",
+                "isSettings": false,
+                "module": "75afd653-234c-4436-9079-caf819f445e6",
+                "name": "Criar DRE",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "3470389f-afad-4cd2-95d6-a83ddd6476a8": {
+                "identifier": "gonext:modelos:editarmodelocompartilhado",
+                "isSettings": false,
+                "module": "2a9008f7-1736-4daa-843c-8db010a256f1",
+                "name": "Editar modelo compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "4029137a-9009-4602-9b72-3f64e7e90ae7": {
+                "identifier": "gonext:demonstrativorazao:visualizarrazao",
+                "isSettings": false,
+                "module": "173034d2-d7fe-4c2b-8fe4-106e6db1fe0c",
+                "name": "Visualizar razão",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "4344391a-2cfd-49c4-8174-205792479005": {
+                "identifier": "gonext:demonstrativobalancete:excluirbalancete",
+                "isSettings": false,
+                "module": "79dfd9bb-fb3b-4a8f-8cd2-b337f491fecd",
+                "name": "Excluir balancete",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "4c043dec-3aae-40b8-8cc4-de91279e1c12": {
+                "identifier": "gonext:demonstrativorazao:editarrazaocompartilhado",
+                "isSettings": false,
+                "module": "173034d2-d7fe-4c2b-8fe4-106e6db1fe0c",
+                "name": "Editar razão compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "4c2202ca-2f77-43f3-bec9-c78b49ade37c": {
+                "identifier": "gonext:modelos:excluirmodelo",
+                "isSettings": false,
+                "module": "2a9008f7-1736-4daa-843c-8db010a256f1",
+                "name": "Excluir modelo",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "4c79c44f-42ed-4b49-91ba-903f3f98fb18": {
+                "identifier": "gonext:demonstrativoderesultadosdoexercicio:duplicardrecompartilhado",
+                "isSettings": false,
+                "module": "75afd653-234c-4436-9079-caf819f445e6",
+                "name": "Duplicar DRE compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "4eb9fdd5-8df9-45ea-bbd5-13436975d750": {
+                "identifier": "gonext:lancamentosgerenciais:editarcalendariodelancamentos",
+                "isSettings": false,
+                "module": "89df2193-ee29-4f18-b5db-858267b81232",
+                "name": "Editar calendário de lançamentos",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "5a49d7c8-1f20-46e4-85c9-b5b187d66bbb": {
+                "identifier": "gonext:lancamentosgerenciais:excluirlancamentos",
+                "isSettings": false,
+                "module": "89df2193-ee29-4f18-b5db-858267b81232",
+                "name": "Excluir lançamentos",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "5e98781b-a93c-4015-8ceb-cc6ab6e3387b": {
+                "identifier": "gonext:modelos:criarmodelo",
+                "isSettings": false,
+                "module": "2a9008f7-1736-4daa-843c-8db010a256f1",
+                "name": "Criar modelo",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "615158f9-0574-4722-ae6c-87d05ac54091": {
+                "identifier": "gonext:demonstrativoderesultadosdoexercicio:excluirdre",
+                "isSettings": false,
+                "module": "75afd653-234c-4436-9079-caf819f445e6",
+                "name": "Excluir DRE",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "63c8d198-c88a-4dfa-b2ab-94c3373f932d": {
+                "identifier": "gonext:modelos:editarmodelo",
+                "isSettings": false,
+                "module": "2a9008f7-1736-4daa-843c-8db010a256f1",
+                "name": "Editar modelo",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "63ef1ab2-e874-4c75-8c01-212ae53578dc": {
+                "identifier": "gonext:demonstrativobalancete:duplicarbalancetecompartilhado",
+                "isSettings": false,
+                "module": "79dfd9bb-fb3b-4a8f-8cd2-b337f491fecd",
+                "name": "Duplicar balancete compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "6b536588-9a7f-4751-a038-e262683c3e41": {
+                "identifier": "gonext:demonstrativoderesultadosdoexercicio:compartilhardre",
+                "isSettings": false,
+                "module": "75afd653-234c-4436-9079-caf819f445e6",
+                "name": "Compartilhar DRE",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "7fb840ee-b59e-4628-b94b-2e1592ed18bc": {
+                "identifier": "gonext:demonstrativobalancete:editarbalancetecompartilhado",
+                "isSettings": false,
+                "module": "79dfd9bb-fb3b-4a8f-8cd2-b337f491fecd",
+                "name": "Editar balancete compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "85bc8ebe-b6a3-4dbb-9500-63353ef8cc4d": {
+                "identifier": "gonext:demonstrativobalancete:compartilharbalancete",
+                "isSettings": false,
+                "module": "79dfd9bb-fb3b-4a8f-8cd2-b337f491fecd",
+                "name": "Compartilhar balancete",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "94743649-9913-45f7-b7a7-656ad2b37114": {
+                "identifier": "gonext:demonstrativobalancete:criarbalancete",
+                "isSettings": false,
+                "module": "79dfd9bb-fb3b-4a8f-8cd2-b337f491fecd",
+                "name": "Criar balancete",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "a1dd9b09-a99c-4059-b15a-c7a1f726859f": {
+                "identifier": "gonext:demonstrativobalancete:editarbalancete",
+                "isSettings": false,
+                "module": "79dfd9bb-fb3b-4a8f-8cd2-b337f491fecd",
+                "name": "Editar balancete",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "a32c38d6-5739-4104-a102-17e58b0f3b3e": {
+                "identifier": "gonext:modelos:compartilharmodelo",
+                "isSettings": false,
+                "module": "2a9008f7-1736-4daa-843c-8db010a256f1",
+                "name": "Compartilhar modelo",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "a5b3e986-7503-4824-a3d3-00e2bf8948e0": {
+                "identifier": "gonext:demonstrativobalancete:visualizarbalancete",
+                "isSettings": false,
+                "module": "79dfd9bb-fb3b-4a8f-8cd2-b337f491fecd",
+                "name": "Visualizar balancete",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "b33de2f8-58ed-41ab-b660-0adcbf7680ac": {
+                "identifier": "gonext:modelos:duplicarmodelocompartilhado",
+                "isSettings": false,
+                "module": "2a9008f7-1736-4daa-843c-8db010a256f1",
+                "name": "Duplicar modelo compartilhado",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "b70babcd-6cb0-4590-8e71-cedccd90f24d": {
+                "identifier": "gonext:lancamentosgerenciais:criarloteselancamentos",
+                "isSettings": false,
+                "module": "89df2193-ee29-4f18-b5db-858267b81232",
+                "name": "Criar lotes e lançamentos",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "c009c203-ceb3-4a97-b90d-12861e9a0a36": {
+                "identifier": "gonext:demonstrativoderesultadosdoexercicio:visualizardre",
+                "isSettings": false,
+                "module": "75afd653-234c-4436-9079-caf819f445e6",
+                "name": "Visualizar DRE",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "c351c45f-34f8-4249-9eb2-ca3a9abc23a0": {
+                "identifier": "gonext:lancamentosgerenciais:editarloteselancamentos",
+                "isSettings": false,
+                "module": "89df2193-ee29-4f18-b5db-858267b81232",
+                "name": "Editar lotes e lançamentos",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "cb75077b-3a1f-4b96-857c-bdb690ef04c4": {
+                "identifier": "gonext:demonstrativorazao:compartilharrazao",
+                "isSettings": false,
+                "module": "173034d2-d7fe-4c2b-8fe4-106e6db1fe0c",
+                "name": "Compartilhar razão",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "cbea1d24-5400-412f-bf58-17456108f9e0": {
+                "identifier": "gonext:demonstrativorazao:editarrazao",
+                "isSettings": false,
+                "module": "173034d2-d7fe-4c2b-8fe4-106e6db1fe0c",
+                "name": "Editar razão",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "ceb0a870-b772-40d1-bfbd-b0a2ba0b712e": {
+                "identifier": "gonext:demonstrativorazao:excluirrazao",
+                "isSettings": false,
+                "module": "173034d2-d7fe-4c2b-8fe4-106e6db1fe0c",
+                "name": "Excluir razão",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "d30b50c9-c03f-4f67-9f6e-a005b62625d0": {
+                "identifier": "gonext:demonstrativorazao:criarrazao",
+                "isSettings": false,
+                "module": "173034d2-d7fe-4c2b-8fe4-106e6db1fe0c",
+                "name": "Criar razão",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "d670759f-e1b8-4180-8bd2-4783e954ece5": {
+                "identifier": "gonext:lancamentosgerenciais:visualizarloteselancamentos",
+                "isSettings": false,
+                "module": "89df2193-ee29-4f18-b5db-858267b81232",
+                "name": "Visualizar lotes e lançamentos",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "e0c50bc7-ffbe-41d4-9188-4200b16820f4": {
+                "identifier": "gonext:modelos:visualizarmodelo",
+                "isSettings": false,
+                "module": "2a9008f7-1736-4daa-843c-8db010a256f1",
+                "name": "Visualizar modelo",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            },
+            "f45970ad-4cc2-4857-b756-a6d2288ade34": {
+                "identifier": "gonext:lancamentosgerenciais:excluirlotes",
+                "isSettings": false,
+                "module": "89df2193-ee29-4f18-b5db-858267b81232",
+                "name": "Excluir lotes",
+                "solution": "91d4556a-9765-4398-b540-5439cc2105aa"
+            }
+        },
+        "customers": {
+            "23101628-8ac1-430f-a4ec-da53064e09e4": {
+                "groups": {},
+                "id": 123,
+                "name": "IRMAOS ANDREAZZA",
+                "rolePermissions": {
+                    "b876ab12-1df0-4bf9-9eb7-69cac0ef1a84": {
+                        "name": "Padrão",
+                        "permissions": []
+                    },
+                    "caf4471b-7c39-4e5d-bb25-3546a4e6ff1d": {
+                        "name": "Administrador",
+                        "permissions": []
+                    },
+                    "f68836c0-0511-430a-9e9f-19d92f596680": {
+                        "name": "Supervisor",
+                        "permissions": []
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "f4b68b9a-ba58-4c38-b1bb-dd8c46d57f2d": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 20,
+                        "name": "Sysadmin",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {}
+                    }
+                }
+            },
+            "25fcc21a-fcf8-4f6c-bf31-6e9f3444959e": {
+                "groups": {
+                    "0e0c5b07-be5a-4e89-a893-17e811834113": {
+                        "name": "Líderes de time",
+                        "roles": [],
+                        "users": [
+                            "be087b95-ae70-423a-928c-9803d75901e7",
+                            "454b870c-871d-426d-a247-74c9b58d3e7b",
+                            "0aa482bd-fa7b-43de-833b-5946ca55d37d",
+                            "7fa84983-6c32-49d8-80eb-3874c1e469a2",
+                            "eca239e0-ef4b-45d3-bc4a-72fa9e203a60"
+                        ]
+                    },
+                    "75118468-e0d4-4221-9416-c348354290a6": {
+                        "name": "Desenvolvedores",
+                        "roles": [],
+                        "users": [
+                            "adc522f4-88f9-4a0e-a8cd-ddfca99dd65d",
+                            "1b44548f-0091-40ec-9fb7-2b7e6a490178",
+                            "66062618-e502-4541-8baf-2afde23760d9"
+                        ]
+                    }
+                },
+                "id": 1,
+                "name": "Goapice Desenvolvimento",
+                "rolePermissions": {
+                    "00eb132e-239b-4e6b-8a1d-abe1b987ea60": {
+                        "name": "Administrador (Cópia 1)",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "1a162e2f-5b36-4c72-a20d-d6df84d9c4e1": {
+                        "name": "Administrador (Cópia 5)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "b1e65470-72b3-4336-81a4-0b5313e17617",
+                            "1578d598-8d79-4009-85e1-7d3394b47256",
+                            "d4f7d8c2-7bb5-46d0-af55-fef2d2bdd12c",
+                            "c3dde663-5c56-4310-b338-eeddc0609ba9",
+                            "8e47c8e3-d8b0-4e4d-a582-294f7396d3db",
+                            "e9fcc802-17e7-4c74-a523-0c53d96ef93d",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082",
+                            "4e14e128-0c05-4779-9a7c-92bacebcbf84",
+                            "4c4e29bb-53cf-4d4d-bdc0-6f2c6cd4514a",
+                            "2a634cc6-35b8-42d0-900a-a8b6c7ccc7b5",
+                            "bc1e6760-4062-4f78-8d03-3e29f2bdcf95",
+                            "5da8042a-72bd-4565-9c13-3d5e4fdb3c55",
+                            "152a5841-aad2-4621-a346-daf32cc63d1c",
+                            "7dab71f0-b345-4ea8-9558-b03724aa4902",
+                            "9436857a-ffff-4b4d-984a-9ae6d3efcb54",
+                            "7bd33bd9-a0d1-4413-a72b-0ae0c729865b",
+                            "59180153-5c6f-47e9-a5cb-90fe5cc16aa7",
+                            "74acfefa-6ae2-4494-8c33-06dbdd93e3a7",
+                            "166ba8af-a8b0-4f8c-a5f9-db99ffc0d9ab",
+                            "dc310528-ab5e-4746-aa8a-d3ca1e9b9ff6",
+                            "09e86a37-6186-4ae8-b040-954779a839d1",
+                            "5a38b328-5993-4848-b3c7-ea37f4334018",
+                            "3e3c84ad-c664-45f3-8b9e-bff702b3799f",
+                            "91a4cb82-e2b6-4ec6-9431-3180c4112a99",
+                            "ab4d4018-bb8f-451d-9232-db199924e9a6",
+                            "3fedb16a-a47b-44fa-aaf6-f5621d45a003",
+                            "9787f84e-f87b-4519-93f9-e0c0762da6dd",
+                            "a1c1d5ec-3701-4beb-ab86-703e2c2f0fdf",
+                            "109adbc7-1263-438d-8f91-11e8fe00e8a1",
+                            "cd571129-4b22-4f0d-8fa9-486ad354d805",
+                            "7a17a128-f732-408d-9ded-284f597093c5",
+                            "931bedc4-594a-4e89-84be-86460a137590",
+                            "fe8ef9a0-1cb5-4f6d-9850-e94d8be43a83",
+                            "7e069021-19c4-46fe-9ff8-f2dded173ca7",
+                            "6d567083-3685-4d9d-929a-1d3752559579",
+                            "955ce2f3-6ea3-44ff-8b15-7fab48ec2d2c",
+                            "c6a09748-f13b-4457-aafc-542e0baa8e29",
+                            "dc993e67-630b-4a34-9ee3-dd951c56e62e",
+                            "5789f843-6c93-41aa-b2b2-ad007f66a3a3",
+                            "b70babcd-6cb0-4590-8e71-cedccd90f24d",
+                            "d670759f-e1b8-4180-8bd2-4783e954ece5",
+                            "c351c45f-34f8-4249-9eb2-ca3a9abc23a0",
+                            "f45970ad-4cc2-4857-b756-a6d2288ade34",
+                            "5a49d7c8-1f20-46e4-85c9-b5b187d66bbb",
+                            "4eb9fdd5-8df9-45ea-bbd5-13436975d750",
+                            "d30b50c9-c03f-4f67-9f6e-a005b62625d0",
+                            "4029137a-9009-4602-9b72-3f64e7e90ae7",
+                            "cbea1d24-5400-412f-bf58-17456108f9e0",
+                            "ceb0a870-b772-40d1-bfbd-b0a2ba0b712e",
+                            "00fe2f36-4e61-4f53-8b00-8fd742efb7f8",
+                            "4c043dec-3aae-40b8-8cc4-de91279e1c12",
+                            "cb75077b-3a1f-4b96-857c-bdb690ef04c4",
+                            "22316b3d-54b4-4916-b596-944633c32c89",
+                            "c009c203-ceb3-4a97-b90d-12861e9a0a36",
+                            "1e51c327-5582-4fa8-8562-2b932dedfa61",
+                            "615158f9-0574-4722-ae6c-87d05ac54091",
+                            "6b536588-9a7f-4751-a038-e262683c3e41",
+                            "4c79c44f-42ed-4b49-91ba-903f3f98fb18",
+                            "088394ca-8baf-4c46-83ed-d59a96668416",
+                            "94743649-9913-45f7-b7a7-656ad2b37114",
+                            "a5b3e986-7503-4824-a3d3-00e2bf8948e0",
+                            "a1dd9b09-a99c-4059-b15a-c7a1f726859f",
+                            "4344391a-2cfd-49c4-8174-205792479005",
+                            "85bc8ebe-b6a3-4dbb-9500-63353ef8cc4d",
+                            "63ef1ab2-e874-4c75-8c01-212ae53578dc",
+                            "7fb840ee-b59e-4628-b94b-2e1592ed18bc",
+                            "5e98781b-a93c-4015-8ceb-cc6ab6e3387b",
+                            "e0c50bc7-ffbe-41d4-9188-4200b16820f4",
+                            "63c8d198-c88a-4dfa-b2ab-94c3373f932d",
+                            "4c2202ca-2f77-43f3-bec9-c78b49ade37c",
+                            "a32c38d6-5739-4104-a102-17e58b0f3b3e",
+                            "3470389f-afad-4cd2-95d6-a83ddd6476a8"
+                        ]
+                    },
+                    "2a38b6c6-4b0c-4a7f-838e-37b7a7bfcefd": {
+                        "name": "Administrador",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "b1e65470-72b3-4336-81a4-0b5313e17617",
+                            "1578d598-8d79-4009-85e1-7d3394b47256",
+                            "d4f7d8c2-7bb5-46d0-af55-fef2d2bdd12c",
+                            "c3dde663-5c56-4310-b338-eeddc0609ba9",
+                            "8e47c8e3-d8b0-4e4d-a582-294f7396d3db",
+                            "e9fcc802-17e7-4c74-a523-0c53d96ef93d",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082",
+                            "4e14e128-0c05-4779-9a7c-92bacebcbf84",
+                            "4c4e29bb-53cf-4d4d-bdc0-6f2c6cd4514a",
+                            "2a634cc6-35b8-42d0-900a-a8b6c7ccc7b5",
+                            "bc1e6760-4062-4f78-8d03-3e29f2bdcf95",
+                            "5da8042a-72bd-4565-9c13-3d5e4fdb3c55",
+                            "152a5841-aad2-4621-a346-daf32cc63d1c",
+                            "7dab71f0-b345-4ea8-9558-b03724aa4902",
+                            "9436857a-ffff-4b4d-984a-9ae6d3efcb54",
+                            "7bd33bd9-a0d1-4413-a72b-0ae0c729865b",
+                            "59180153-5c6f-47e9-a5cb-90fe5cc16aa7",
+                            "74acfefa-6ae2-4494-8c33-06dbdd93e3a7",
+                            "166ba8af-a8b0-4f8c-a5f9-db99ffc0d9ab",
+                            "dc310528-ab5e-4746-aa8a-d3ca1e9b9ff6",
+                            "09e86a37-6186-4ae8-b040-954779a839d1",
+                            "5a38b328-5993-4848-b3c7-ea37f4334018",
+                            "3e3c84ad-c664-45f3-8b9e-bff702b3799f",
+                            "91a4cb82-e2b6-4ec6-9431-3180c4112a99",
+                            "ab4d4018-bb8f-451d-9232-db199924e9a6",
+                            "3fedb16a-a47b-44fa-aaf6-f5621d45a003",
+                            "9787f84e-f87b-4519-93f9-e0c0762da6dd",
+                            "a1c1d5ec-3701-4beb-ab86-703e2c2f0fdf",
+                            "109adbc7-1263-438d-8f91-11e8fe00e8a1",
+                            "cd571129-4b22-4f0d-8fa9-486ad354d805",
+                            "7a17a128-f732-408d-9ded-284f597093c5",
+                            "931bedc4-594a-4e89-84be-86460a137590",
+                            "fe8ef9a0-1cb5-4f6d-9850-e94d8be43a83",
+                            "7e069021-19c4-46fe-9ff8-f2dded173ca7",
+                            "6d567083-3685-4d9d-929a-1d3752559579",
+                            "955ce2f3-6ea3-44ff-8b15-7fab48ec2d2c",
+                            "c6a09748-f13b-4457-aafc-542e0baa8e29",
+                            "dc993e67-630b-4a34-9ee3-dd951c56e62e",
+                            "5789f843-6c93-41aa-b2b2-ad007f66a3a3",
+                            "b70babcd-6cb0-4590-8e71-cedccd90f24d",
+                            "d670759f-e1b8-4180-8bd2-4783e954ece5",
+                            "c351c45f-34f8-4249-9eb2-ca3a9abc23a0",
+                            "f45970ad-4cc2-4857-b756-a6d2288ade34",
+                            "5a49d7c8-1f20-46e4-85c9-b5b187d66bbb",
+                            "4eb9fdd5-8df9-45ea-bbd5-13436975d750",
+                            "d30b50c9-c03f-4f67-9f6e-a005b62625d0",
+                            "4029137a-9009-4602-9b72-3f64e7e90ae7",
+                            "cbea1d24-5400-412f-bf58-17456108f9e0",
+                            "ceb0a870-b772-40d1-bfbd-b0a2ba0b712e",
+                            "00fe2f36-4e61-4f53-8b00-8fd742efb7f8",
+                            "4c043dec-3aae-40b8-8cc4-de91279e1c12",
+                            "cb75077b-3a1f-4b96-857c-bdb690ef04c4",
+                            "22316b3d-54b4-4916-b596-944633c32c89",
+                            "c009c203-ceb3-4a97-b90d-12861e9a0a36",
+                            "1e51c327-5582-4fa8-8562-2b932dedfa61",
+                            "615158f9-0574-4722-ae6c-87d05ac54091",
+                            "6b536588-9a7f-4751-a038-e262683c3e41",
+                            "4c79c44f-42ed-4b49-91ba-903f3f98fb18",
+                            "088394ca-8baf-4c46-83ed-d59a96668416",
+                            "94743649-9913-45f7-b7a7-656ad2b37114",
+                            "a5b3e986-7503-4824-a3d3-00e2bf8948e0",
+                            "a1dd9b09-a99c-4059-b15a-c7a1f726859f",
+                            "4344391a-2cfd-49c4-8174-205792479005",
+                            "85bc8ebe-b6a3-4dbb-9500-63353ef8cc4d",
+                            "63ef1ab2-e874-4c75-8c01-212ae53578dc",
+                            "7fb840ee-b59e-4628-b94b-2e1592ed18bc",
+                            "5e98781b-a93c-4015-8ceb-cc6ab6e3387b",
+                            "e0c50bc7-ffbe-41d4-9188-4200b16820f4",
+                            "63c8d198-c88a-4dfa-b2ab-94c3373f932d",
+                            "4c2202ca-2f77-43f3-bec9-c78b49ade37c",
+                            "a32c38d6-5739-4104-a102-17e58b0f3b3e",
+                            "3470389f-afad-4cd2-95d6-a83ddd6476a8"
+                        ]
+                    },
+                    "4408015e-bf38-4609-b090-5061a4c0eb30": {
+                        "name": "Supervisor (Cópia)",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "4a288e7f-2640-4955-aebe-c73829ac5c25": {
+                        "name": "Administrador (Cópia 3)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "7341ae29-7ea6-4080-9459-19424cb80095": {
+                        "name": "Administrador (Cópia)",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "854a09d2-492c-4ec4-a8d6-561c207e6ef8": {
+                        "name": "Administrador (Cópia 4)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "b1e65470-72b3-4336-81a4-0b5313e17617",
+                            "1578d598-8d79-4009-85e1-7d3394b47256",
+                            "d4f7d8c2-7bb5-46d0-af55-fef2d2bdd12c",
+                            "c3dde663-5c56-4310-b338-eeddc0609ba9",
+                            "8e47c8e3-d8b0-4e4d-a582-294f7396d3db",
+                            "e9fcc802-17e7-4c74-a523-0c53d96ef93d",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082",
+                            "4e14e128-0c05-4779-9a7c-92bacebcbf84",
+                            "4c4e29bb-53cf-4d4d-bdc0-6f2c6cd4514a",
+                            "2a634cc6-35b8-42d0-900a-a8b6c7ccc7b5",
+                            "bc1e6760-4062-4f78-8d03-3e29f2bdcf95",
+                            "5da8042a-72bd-4565-9c13-3d5e4fdb3c55",
+                            "152a5841-aad2-4621-a346-daf32cc63d1c",
+                            "7dab71f0-b345-4ea8-9558-b03724aa4902",
+                            "9436857a-ffff-4b4d-984a-9ae6d3efcb54",
+                            "7bd33bd9-a0d1-4413-a72b-0ae0c729865b",
+                            "59180153-5c6f-47e9-a5cb-90fe5cc16aa7",
+                            "74acfefa-6ae2-4494-8c33-06dbdd93e3a7",
+                            "166ba8af-a8b0-4f8c-a5f9-db99ffc0d9ab",
+                            "dc310528-ab5e-4746-aa8a-d3ca1e9b9ff6",
+                            "09e86a37-6186-4ae8-b040-954779a839d1",
+                            "5a38b328-5993-4848-b3c7-ea37f4334018",
+                            "3e3c84ad-c664-45f3-8b9e-bff702b3799f",
+                            "91a4cb82-e2b6-4ec6-9431-3180c4112a99",
+                            "ab4d4018-bb8f-451d-9232-db199924e9a6",
+                            "3fedb16a-a47b-44fa-aaf6-f5621d45a003",
+                            "9787f84e-f87b-4519-93f9-e0c0762da6dd",
+                            "a1c1d5ec-3701-4beb-ab86-703e2c2f0fdf",
+                            "109adbc7-1263-438d-8f91-11e8fe00e8a1",
+                            "cd571129-4b22-4f0d-8fa9-486ad354d805",
+                            "7a17a128-f732-408d-9ded-284f597093c5",
+                            "931bedc4-594a-4e89-84be-86460a137590",
+                            "fe8ef9a0-1cb5-4f6d-9850-e94d8be43a83",
+                            "7e069021-19c4-46fe-9ff8-f2dded173ca7",
+                            "6d567083-3685-4d9d-929a-1d3752559579",
+                            "955ce2f3-6ea3-44ff-8b15-7fab48ec2d2c",
+                            "c6a09748-f13b-4457-aafc-542e0baa8e29",
+                            "dc993e67-630b-4a34-9ee3-dd951c56e62e",
+                            "5789f843-6c93-41aa-b2b2-ad007f66a3a3",
+                            "b70babcd-6cb0-4590-8e71-cedccd90f24d",
+                            "d670759f-e1b8-4180-8bd2-4783e954ece5",
+                            "c351c45f-34f8-4249-9eb2-ca3a9abc23a0",
+                            "f45970ad-4cc2-4857-b756-a6d2288ade34",
+                            "5a49d7c8-1f20-46e4-85c9-b5b187d66bbb",
+                            "4eb9fdd5-8df9-45ea-bbd5-13436975d750",
+                            "d30b50c9-c03f-4f67-9f6e-a005b62625d0",
+                            "4029137a-9009-4602-9b72-3f64e7e90ae7",
+                            "cbea1d24-5400-412f-bf58-17456108f9e0",
+                            "ceb0a870-b772-40d1-bfbd-b0a2ba0b712e",
+                            "00fe2f36-4e61-4f53-8b00-8fd742efb7f8",
+                            "4c043dec-3aae-40b8-8cc4-de91279e1c12",
+                            "cb75077b-3a1f-4b96-857c-bdb690ef04c4",
+                            "22316b3d-54b4-4916-b596-944633c32c89",
+                            "c009c203-ceb3-4a97-b90d-12861e9a0a36",
+                            "1e51c327-5582-4fa8-8562-2b932dedfa61",
+                            "615158f9-0574-4722-ae6c-87d05ac54091",
+                            "6b536588-9a7f-4751-a038-e262683c3e41",
+                            "4c79c44f-42ed-4b49-91ba-903f3f98fb18",
+                            "088394ca-8baf-4c46-83ed-d59a96668416",
+                            "94743649-9913-45f7-b7a7-656ad2b37114",
+                            "a5b3e986-7503-4824-a3d3-00e2bf8948e0",
+                            "a1dd9b09-a99c-4059-b15a-c7a1f726859f",
+                            "4344391a-2cfd-49c4-8174-205792479005",
+                            "85bc8ebe-b6a3-4dbb-9500-63353ef8cc4d",
+                            "63ef1ab2-e874-4c75-8c01-212ae53578dc",
+                            "7fb840ee-b59e-4628-b94b-2e1592ed18bc",
+                            "5e98781b-a93c-4015-8ceb-cc6ab6e3387b",
+                            "e0c50bc7-ffbe-41d4-9188-4200b16820f4",
+                            "63c8d198-c88a-4dfa-b2ab-94c3373f932d",
+                            "4c2202ca-2f77-43f3-bec9-c78b49ade37c",
+                            "a32c38d6-5739-4104-a102-17e58b0f3b3e",
+                            "3470389f-afad-4cd2-95d6-a83ddd6476a8"
+                        ]
+                    },
+                    "86136dc4-b1c4-474f-9381-8d6ae2c1fe16": {
+                        "name": "Supervisor (Cópia 1)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "9828e0d9-37aa-4e61-a217-d04d30e760f0": {
+                        "name": "Supervisor (Cópia 2)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "bc82508e-4987-4d77-8b7e-dd88c9f1cf99": {
+                        "name": "Supervisor",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "b1e65470-72b3-4336-81a4-0b5313e17617",
+                            "1578d598-8d79-4009-85e1-7d3394b47256",
+                            "d4f7d8c2-7bb5-46d0-af55-fef2d2bdd12c",
+                            "c3dde663-5c56-4310-b338-eeddc0609ba9",
+                            "8e47c8e3-d8b0-4e4d-a582-294f7396d3db",
+                            "e9fcc802-17e7-4c74-a523-0c53d96ef93d",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082",
+                            "4e14e128-0c05-4779-9a7c-92bacebcbf84",
+                            "4c4e29bb-53cf-4d4d-bdc0-6f2c6cd4514a",
+                            "2a634cc6-35b8-42d0-900a-a8b6c7ccc7b5",
+                            "bc1e6760-4062-4f78-8d03-3e29f2bdcf95",
+                            "5da8042a-72bd-4565-9c13-3d5e4fdb3c55",
+                            "152a5841-aad2-4621-a346-daf32cc63d1c",
+                            "7dab71f0-b345-4ea8-9558-b03724aa4902",
+                            "9436857a-ffff-4b4d-984a-9ae6d3efcb54",
+                            "7bd33bd9-a0d1-4413-a72b-0ae0c729865b",
+                            "59180153-5c6f-47e9-a5cb-90fe5cc16aa7",
+                            "74acfefa-6ae2-4494-8c33-06dbdd93e3a7",
+                            "166ba8af-a8b0-4f8c-a5f9-db99ffc0d9ab",
+                            "dc310528-ab5e-4746-aa8a-d3ca1e9b9ff6",
+                            "09e86a37-6186-4ae8-b040-954779a839d1",
+                            "5a38b328-5993-4848-b3c7-ea37f4334018",
+                            "3e3c84ad-c664-45f3-8b9e-bff702b3799f",
+                            "91a4cb82-e2b6-4ec6-9431-3180c4112a99",
+                            "ab4d4018-bb8f-451d-9232-db199924e9a6",
+                            "3fedb16a-a47b-44fa-aaf6-f5621d45a003",
+                            "9787f84e-f87b-4519-93f9-e0c0762da6dd",
+                            "a1c1d5ec-3701-4beb-ab86-703e2c2f0fdf",
+                            "109adbc7-1263-438d-8f91-11e8fe00e8a1",
+                            "cd571129-4b22-4f0d-8fa9-486ad354d805",
+                            "7a17a128-f732-408d-9ded-284f597093c5",
+                            "931bedc4-594a-4e89-84be-86460a137590",
+                            "fe8ef9a0-1cb5-4f6d-9850-e94d8be43a83",
+                            "7e069021-19c4-46fe-9ff8-f2dded173ca7",
+                            "6d567083-3685-4d9d-929a-1d3752559579",
+                            "955ce2f3-6ea3-44ff-8b15-7fab48ec2d2c",
+                            "c6a09748-f13b-4457-aafc-542e0baa8e29",
+                            "dc993e67-630b-4a34-9ee3-dd951c56e62e",
+                            "5789f843-6c93-41aa-b2b2-ad007f66a3a3",
+                            "b70babcd-6cb0-4590-8e71-cedccd90f24d",
+                            "d670759f-e1b8-4180-8bd2-4783e954ece5",
+                            "c351c45f-34f8-4249-9eb2-ca3a9abc23a0",
+                            "f45970ad-4cc2-4857-b756-a6d2288ade34",
+                            "5a49d7c8-1f20-46e4-85c9-b5b187d66bbb",
+                            "4eb9fdd5-8df9-45ea-bbd5-13436975d750",
+                            "d30b50c9-c03f-4f67-9f6e-a005b62625d0",
+                            "4029137a-9009-4602-9b72-3f64e7e90ae7"
+                        ]
+                    },
+                    "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d": {
+                        "name": "Operador",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "b1e65470-72b3-4336-81a4-0b5313e17617",
+                            "1578d598-8d79-4009-85e1-7d3394b47256",
+                            "d4f7d8c2-7bb5-46d0-af55-fef2d2bdd12c",
+                            "c3dde663-5c56-4310-b338-eeddc0609ba9",
+                            "8e47c8e3-d8b0-4e4d-a582-294f7396d3db",
+                            "e9fcc802-17e7-4c74-a523-0c53d96ef93d",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082",
+                            "4e14e128-0c05-4779-9a7c-92bacebcbf84",
+                            "4c4e29bb-53cf-4d4d-bdc0-6f2c6cd4514a",
+                            "2a634cc6-35b8-42d0-900a-a8b6c7ccc7b5",
+                            "bc1e6760-4062-4f78-8d03-3e29f2bdcf95",
+                            "5da8042a-72bd-4565-9c13-3d5e4fdb3c55",
+                            "152a5841-aad2-4621-a346-daf32cc63d1c",
+                            "7dab71f0-b345-4ea8-9558-b03724aa4902",
+                            "9436857a-ffff-4b4d-984a-9ae6d3efcb54",
+                            "7bd33bd9-a0d1-4413-a72b-0ae0c729865b",
+                            "59180153-5c6f-47e9-a5cb-90fe5cc16aa7",
+                            "74acfefa-6ae2-4494-8c33-06dbdd93e3a7",
+                            "166ba8af-a8b0-4f8c-a5f9-db99ffc0d9ab",
+                            "dc310528-ab5e-4746-aa8a-d3ca1e9b9ff6",
+                            "09e86a37-6186-4ae8-b040-954779a839d1",
+                            "5a38b328-5993-4848-b3c7-ea37f4334018",
+                            "3e3c84ad-c664-45f3-8b9e-bff702b3799f",
+                            "91a4cb82-e2b6-4ec6-9431-3180c4112a99",
+                            "ab4d4018-bb8f-451d-9232-db199924e9a6",
+                            "3fedb16a-a47b-44fa-aaf6-f5621d45a003",
+                            "9787f84e-f87b-4519-93f9-e0c0762da6dd",
+                            "a1c1d5ec-3701-4beb-ab86-703e2c2f0fdf",
+                            "109adbc7-1263-438d-8f91-11e8fe00e8a1",
+                            "cd571129-4b22-4f0d-8fa9-486ad354d805",
+                            "7a17a128-f732-408d-9ded-284f597093c5",
+                            "931bedc4-594a-4e89-84be-86460a137590",
+                            "fe8ef9a0-1cb5-4f6d-9850-e94d8be43a83",
+                            "7e069021-19c4-46fe-9ff8-f2dded173ca7",
+                            "6d567083-3685-4d9d-929a-1d3752559579",
+                            "955ce2f3-6ea3-44ff-8b15-7fab48ec2d2c",
+                            "c6a09748-f13b-4457-aafc-542e0baa8e29",
+                            "dc993e67-630b-4a34-9ee3-dd951c56e62e",
+                            "5789f843-6c93-41aa-b2b2-ad007f66a3a3"
+                        ]
+                    },
+                    "f2fe22dc-4e63-458a-a0c8-5dd5ef78c364": {
+                        "name": "Administrador (Cópia 2)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "f8e76862-db20-4245-b991-3191a125007e": {
+                        "name": "Renan",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "b1e65470-72b3-4336-81a4-0b5313e17617",
+                            "1578d598-8d79-4009-85e1-7d3394b47256",
+                            "d4f7d8c2-7bb5-46d0-af55-fef2d2bdd12c",
+                            "c3dde663-5c56-4310-b338-eeddc0609ba9",
+                            "8e47c8e3-d8b0-4e4d-a582-294f7396d3db",
+                            "e9fcc802-17e7-4c74-a523-0c53d96ef93d",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082",
+                            "4e14e128-0c05-4779-9a7c-92bacebcbf84",
+                            "4c4e29bb-53cf-4d4d-bdc0-6f2c6cd4514a",
+                            "2a634cc6-35b8-42d0-900a-a8b6c7ccc7b5",
+                            "bc1e6760-4062-4f78-8d03-3e29f2bdcf95",
+                            "5da8042a-72bd-4565-9c13-3d5e4fdb3c55",
+                            "152a5841-aad2-4621-a346-daf32cc63d1c",
+                            "7dab71f0-b345-4ea8-9558-b03724aa4902",
+                            "9436857a-ffff-4b4d-984a-9ae6d3efcb54",
+                            "7bd33bd9-a0d1-4413-a72b-0ae0c729865b",
+                            "59180153-5c6f-47e9-a5cb-90fe5cc16aa7",
+                            "74acfefa-6ae2-4494-8c33-06dbdd93e3a7",
+                            "166ba8af-a8b0-4f8c-a5f9-db99ffc0d9ab",
+                            "dc310528-ab5e-4746-aa8a-d3ca1e9b9ff6",
+                            "09e86a37-6186-4ae8-b040-954779a839d1",
+                            "5a38b328-5993-4848-b3c7-ea37f4334018",
+                            "3e3c84ad-c664-45f3-8b9e-bff702b3799f",
+                            "91a4cb82-e2b6-4ec6-9431-3180c4112a99",
+                            "ab4d4018-bb8f-451d-9232-db199924e9a6",
+                            "3fedb16a-a47b-44fa-aaf6-f5621d45a003",
+                            "9787f84e-f87b-4519-93f9-e0c0762da6dd",
+                            "a1c1d5ec-3701-4beb-ab86-703e2c2f0fdf",
+                            "109adbc7-1263-438d-8f91-11e8fe00e8a1",
+                            "cd571129-4b22-4f0d-8fa9-486ad354d805",
+                            "7a17a128-f732-408d-9ded-284f597093c5",
+                            "931bedc4-594a-4e89-84be-86460a137590",
+                            "fe8ef9a0-1cb5-4f6d-9850-e94d8be43a83",
+                            "7e069021-19c4-46fe-9ff8-f2dded173ca7",
+                            "6d567083-3685-4d9d-929a-1d3752559579",
+                            "955ce2f3-6ea3-44ff-8b15-7fab48ec2d2c",
+                            "c6a09748-f13b-4457-aafc-542e0baa8e29",
+                            "dc993e67-630b-4a34-9ee3-dd951c56e62e",
+                            "5789f843-6c93-41aa-b2b2-ad007f66a3a3",
+                            "b70babcd-6cb0-4590-8e71-cedccd90f24d",
+                            "d670759f-e1b8-4180-8bd2-4783e954ece5",
+                            "c351c45f-34f8-4249-9eb2-ca3a9abc23a0",
+                            "f45970ad-4cc2-4857-b756-a6d2288ade34",
+                            "5a49d7c8-1f20-46e4-85c9-b5b187d66bbb",
+                            "4eb9fdd5-8df9-45ea-bbd5-13436975d750",
+                            "d30b50c9-c03f-4f67-9f6e-a005b62625d0",
+                            "4029137a-9009-4602-9b72-3f64e7e90ae7",
+                            "cbea1d24-5400-412f-bf58-17456108f9e0",
+                            "ceb0a870-b772-40d1-bfbd-b0a2ba0b712e",
+                            "00fe2f36-4e61-4f53-8b00-8fd742efb7f8",
+                            "4c043dec-3aae-40b8-8cc4-de91279e1c12",
+                            "cb75077b-3a1f-4b96-857c-bdb690ef04c4",
+                            "22316b3d-54b4-4916-b596-944633c32c89",
+                            "c009c203-ceb3-4a97-b90d-12861e9a0a36",
+                            "1e51c327-5582-4fa8-8562-2b932dedfa61",
+                            "615158f9-0574-4722-ae6c-87d05ac54091",
+                            "6b536588-9a7f-4751-a038-e262683c3e41",
+                            "4c79c44f-42ed-4b49-91ba-903f3f98fb18",
+                            "088394ca-8baf-4c46-83ed-d59a96668416",
+                            "94743649-9913-45f7-b7a7-656ad2b37114",
+                            "a5b3e986-7503-4824-a3d3-00e2bf8948e0",
+                            "a1dd9b09-a99c-4059-b15a-c7a1f726859f",
+                            "4344391a-2cfd-49c4-8174-205792479005",
+                            "85bc8ebe-b6a3-4dbb-9500-63353ef8cc4d",
+                            "63ef1ab2-e874-4c75-8c01-212ae53578dc",
+                            "7fb840ee-b59e-4628-b94b-2e1592ed18bc",
+                            "5e98781b-a93c-4015-8ceb-cc6ab6e3387b",
+                            "e0c50bc7-ffbe-41d4-9188-4200b16820f4",
+                            "63c8d198-c88a-4dfa-b2ab-94c3373f932d",
+                            "4c2202ca-2f77-43f3-bec9-c78b49ade37c",
+                            "a32c38d6-5739-4104-a102-17e58b0f3b3e",
+                            "3470389f-afad-4cd2-95d6-a83ddd6476a8"
+                        ]
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "0aa482bd-fa7b-43de-833b-5946ca55d37d": {
+                        "directPermissions": {},
+                        "groups": [
+                            "0e0c5b07-be5a-4e89-a893-17e811834113"
+                        ],
+                        "id": 6,
+                        "name": "Mateus",
+                        "role": "bc82508e-4987-4d77-8b7e-dd88c9f1cf99",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "893c938b-164b-38ce-9616-2286bbb4ac6b": {
+                                "id": 258,
+                                "name": "ULT01-PLANDF"
+                            }
+                        }
+                    },
+                    "0ac4e948-501f-436f-a4d5-c4aa7aff1e3a": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 2,
+                        "name": "Flávio",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "0b0a49e9-6c7e-4499-b395-53ef50ead19b": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 16,
+                        "name": "Kallico",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "0cc01094-9717-4567-a04a-799b84ae6bcc": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 213,
+                        "name": "teste",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "0edef2e7-d93b-4e21-8cca-83a894c4e519": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 141,
+                        "name": "Irema",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "1099e176-2fb1-4e2d-9941-972ebf734694": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 51,
+                        "name": "Lucy",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "155f181b-7060-43de-bede-1d695517e50a": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 78,
+                        "name": "Adriana",
+                        "role": "2a38b6c6-4b0c-4a7f-838e-37b7a7bfcefd",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "00a049d3-b547-33a5-98bf-f41409152e19": {
+                                "id": 295,
+                                "name": "BIG06-SIBE"
+                            },
+                            "025311ec-32b1-4af5-988a-afbe610df5e6": {
+                                "id": 341,
+                                "name": "ACS03-105SW"
+                            },
+                            "03a3072c-1591-3838-9b09-de63f8b9ecea": {
+                                "id": 244,
+                                "name": "TOTAL02"
+                            },
+                            "044ec722-1098-4367-9154-0d040df22b47": {
+                                "id": 352,
+                                "name": "BIG19-CAST"
+                            },
+                            "04fba545-6735-409a-b1d8-755cfa80fc7d": {
+                                "id": 330,
+                                "name": "ULT01-PLANDF"
+                            },
+                            "06f88941-f39b-4716-8662-8b0d87b9ec86": {
+                                "id": 335,
+                                "name": "ULT05-PLJK"
+                            },
+                            "080c8b5b-c855-43a1-b2ba-e324457ce129": {
+                                "id": 354,
+                                "name": "BIG12-208N"
+                            },
+                            "0b42adb8-d6f6-3315-a5a4-c7e1f799eb16": {
+                                "id": 261,
+                                "name": "ULT12-SAOSEB"
+                            },
+                            "0b5f4cda-0e90-4207-a36e-4547fb0669e4": {
+                                "id": 363,
+                                "name": "BIG10-PAINEEEE"
+                            },
+                            "0f54cae0-266e-42c3-b33f-ea52932488f9": {
+                                "id": 351,
+                                "name": "Unidade 1"
+                            },
+                            "11c06fa8-aadc-3a46-aa65-277b94f28b06": {
+                                "id": 248,
+                                "name": "ULT09-CEIN"
+                            },
+                            "15980fa7-fe71-426d-be5f-bffe75eef134": {
+                                "id": 361,
+                                "name": "BIG13-QI05"
+                            },
+                            "17dc1422-2aeb-4524-9937-6880c073442c": {
+                                "id": 302,
+                                "name": "Unidade 5"
+                            },
+                            "199d861c-b4b0-4fd1-b553-1cc727afbdd4": {
+                                "id": 359,
+                                "name": "BIG06-SIBE"
+                            },
+                            "1b83823c-352c-4780-8d43-41d1f408311b": {
+                                "id": 339,
+                                "name": "ACS05-106N"
+                            },
+                            "1bb6f00f-5231-3f26-bcef-098e91a39c45": {
+                                "id": 292,
+                                "name": "ACS04-508S"
+                            },
+                            "1c73101c-0823-393f-89dd-fb5fea0dc142": {
+                                "id": 278,
+                                "name": "BIG14-508S"
+                            },
+                            "1e4a2ac7-1274-4f55-897d-3fe547ba7262": {
+                                "id": 305,
+                                "name": "Unidade 5"
+                            },
+                            "1f6d31ba-354f-45ef-b45e-e5d5ec956f9b": {
+                                "id": 362,
+                                "name": "BIG02-402N"
+                            },
+                            "2187ad68-45c4-4d96-b3bc-3515d7e60f5d": {
+                                "id": 320,
+                                "name": "ULT02-GAMA1"
+                            },
+                            "257bcd2c-d830-478e-9fda-6d6965c7db19": {
+                                "id": 353,
+                                "name": "BIG18-211N"
+                            },
+                            "2a2c7420-0a2a-3c39-bfcb-1c08a7210bde": {
+                                "id": 490,
+                                "name": "503-URUANA"
+                            },
+                            "2c62da83-9f56-4b17-affe-2ffe4bb4de7b": {
+                                "id": 314,
+                                "name": "Unidade 9"
+                            },
+                            "2d1ff8f7-66b8-3f65-8f58-a29a116b9ab4": {
+                                "id": 240,
+                                "name": "ULT03-COL"
+                            },
+                            "30466e9a-8e85-3829-ac6f-d46ab52c9b7d": {
+                                "id": 271,
+                                "name": "BIG17-QI11"
+                            },
+                            "31861be5-5e82-41e7-ae4f-ae13a6d7cb50": {
+                                "id": 348,
+                                "name": "BIG16-512S"
+                            },
+                            "352528d9-3d04-300b-a01b-109e1e83b689": {
+                                "id": 241,
+                                "name": "BIG16-512S"
+                            },
+                            "3a67cfe7-6bed-456e-886b-d0f292ae442f": {
+                                "id": 333,
+                                "name": "ULT17-SAMAMB"
+                            },
+                            "3b2ac6bb-b5e2-3b5f-ba0e-76ec15a2b096": {
+                                "id": 265,
+                                "name": "BIG20-TAGC1"
+                            },
+                            "403c9e8b-52e0-3e2f-ba6a-860e22356396": {
+                                "id": 259,
+                                "name": "ACS03-105SW"
+                            },
+                            "44219891-7475-30d2-8e46-c99dd43d206f": {
+                                "id": 267,
+                                "name": "TOTAL01"
+                            },
+                            "458014df-d169-415f-9919-10f599afd7bf": {
+                                "id": 327,
+                                "name": "ULT07-ADE"
+                            },
+                            "4757d11f-4d90-4f22-809f-b002428a4b7f": {
+                                "id": 367,
+                                "name": "BIG01-106N"
+                            },
+                            "47fed2e1-a88d-41d8-8cad-5c0a11c89b8b": {
+                                "id": 342,
+                                "name": "ACS04-508S"
+                            },
+                            "4a27cadf-491d-306a-ba91-17c3da58d2a0": {
+                                "id": 245,
+                                "name": "ULT04-CEIS"
+                            },
+                            "4d51a223-cf8d-35c4-84e5-a09fc2db9701": {
+                                "id": 293,
+                                "name": "ULT23-SMARIA"
+                            },
+                            "4e0e410b-a750-4653-8d98-2677d968d669": {
+                                "id": 332,
+                                "name": "ULT08-ARAP"
+                            },
+                            "4f5e058b-94e8-4502-9f9e-ee70f289db42": {
+                                "id": 324,
+                                "name": "ULT15-SOLNA"
+                            },
+                            "5054984a-4d87-44a5-bc20-32e534abb1f9": {
+                                "id": 329,
+                                "name": "ULT09-CEIN"
+                            },
+                            "51e03e21-cb4d-4fea-80cf-a9e3eacc7c9c": {
+                                "id": 307,
+                                "name": "Unidade 6"
+                            },
+                            "5fb724eb-ef8d-3a68-b90c-8741f16136ca": {
+                                "id": 289,
+                                "name": "ULT06-SOB"
+                            },
+                            "649ed3ed-348a-4023-b29c-d43d2263d0aa": {
+                                "id": 303,
+                                "name": "Unidade 8"
+                            },
+                            "680ff519-484a-3f41-8f5c-8e3985458d69": {
+                                "id": 280,
+                                "name": "ACS02-413S"
+                            },
+                            "68acc082-ff33-4c54-baa9-bbb54cc8bc7f": {
+                                "id": 318,
+                                "name": "ULT14-AGUASL1"
+                            },
+                            "6c948ef4-4384-3966-9cd7-97ae59331fe9": {
+                                "id": 277,
+                                "name": "ULT22-VIPIRES"
+                            },
+                            "6fcb6c8e-c539-34f5-97f4-8a91665c8eff": {
+                                "id": 285,
+                                "name": "BIG04-301SW"
+                            },
+                            "7283fe96-d914-439e-bc86-7f8a444192b9": {
+                                "id": 298,
+                                "name": "TOTAL01"
+                            },
+                            "778798a8-dd25-4472-9ea5-a582272c81f9": {
+                                "id": 306,
+                                "name": "Unidade 3"
+                            },
+                            "78bd4255-46a7-3853-98d1-1c8ce0a5df02": {
+                                "id": 243,
+                                "name": "ULT10-ESTR"
+                            },
+                            "7a6a9839-4bb0-3a18-b19c-3354fc44d244": {
+                                "id": 283,
+                                "name": "BIG09-PEN"
+                            },
+                            "7c16daf2-fc87-321f-86e0-301d9f6bdbdc": {
+                                "id": 273,
+                                "name": "BIG12-208N"
+                            },
+                            "7eead775-afa7-3455-a283-cfbcbb7ba864": {
+                                "id": 260,
+                                "name": "ULT02-GAMA"
+                            },
+                            "809aee16-02d3-48f4-b01f-e6d5bbdca2bd": {
+                                "id": 328,
+                                "name": "ULT04-CEIS"
+                            },
+                            "816b4901-ed7b-4c62-9c30-ad7add0263dc": {
+                                "id": 309,
+                                "name": "Unidade 2"
+                            },
+                            "817c88e7-41ae-33b7-bf36-e5ca20642088": {
+                                "id": 272,
+                                "name": "BIG01-106N"
+                            },
+                            "83824121-c5d8-3ba8-8d02-d254c2a8d954": {
+                                "id": 270,
+                                "name": "ACS06-QI11"
+                            },
+                            "84e4a07a-5f2a-3b1d-a553-7878273e2a17": {
+                                "id": 255,
+                                "name": "ACS01-CAST"
+                            },
+                            "8569f737-01f6-32a2-8157-fc18ebefb7a1": {
+                                "id": 268,
+                                "name": "BIG18-211N"
+                            },
+                            "85f77d77-0483-46de-bafb-08bc060fe266": {
+                                "id": 326,
+                                "name": "ULT18-BRAZL"
+                            },
+                            "86d9c247-5e23-48d1-a243-7e9c1ee2f7b8": {
+                                "id": 365,
+                                "name": "BIG03-413S"
+                            },
+                            "88096021-d22e-357a-bf48-3dec5ae4a47b": {
+                                "id": 284,
+                                "name": "ULT16-PRPARK"
+                            },
+                            "88b88ea6-9524-44ae-8cb7-254adc078f7a": {
+                                "id": 322,
+                                "name": "ULT11-ITAPOA"
+                            },
+                            "893c938b-164b-38ce-9616-2286bbb4ac6b": {
+                                "id": 258,
+                                "name": "ULT01-PLANDF"
+                            },
+                            "8a1f7f3d-4361-4793-9dcc-49c4608c2ec8": {
+                                "id": 301,
+                                "name": "Unidade 6"
+                            },
+                            "8b5466aa-fda6-34ec-b765-98a80cc392d9": {
+                                "id": 282,
+                                "name": "BIG15-105SW"
+                            },
+                            "8dadaced-8e13-39f7-9c34-88ea705f4531": {
+                                "id": 246,
+                                "name": "ULT18-BRAZL"
+                            },
+                            "8fc4c7c2-4f01-37e7-907d-f19e20f40410": {
+                                "id": 247,
+                                "name": "BIG02-402N"
+                            },
+                            "9536d879-b3e2-4650-b458-34cacac4faff": {
+                                "id": 360,
+                                "name": "BIG22-102NW"
+                            },
+                            "95dafd29-5288-4738-a02e-d990dc87b315": {
+                                "id": 319,
+                                "name": "ULT21-PLANGO1"
+                            },
+                            "96a7deaa-0ee4-4e39-a580-46492bca0e51": {
+                                "id": 366,
+                                "name": "BIG15-105SW"
+                            },
+                            "97981ddf-8139-4d27-a659-c8941ffbabd1": {
+                                "id": 297,
+                                "name": "MATRIZ"
+                            },
+                            "9b549749-f1c9-4381-98c7-83e8ea8a5c2c": {
+                                "id": 336,
+                                "name": "ULT06-SOB"
+                            },
+                            "9e8f04de-6f3f-3464-808c-fe1c6a3860c2": {
+                                "id": 257,
+                                "name": "ULT20-TAGS"
+                            },
+                            "a3234119-90aa-3359-a8b2-bd2f9b468122": {
+                                "id": 263,
+                                "name": "BIG24-314N"
+                            },
+                            "ac2301ad-62a2-3145-9465-83f5563e0c4e": {
+                                "id": 254,
+                                "name": "ULT07-ADE"
+                            },
+                            "ae0b47a1-822e-451f-b18f-bec7e9e93bca": {
+                                "id": 368,
+                                "name": "BIG24-314N"
+                            },
+                            "aedc993d-4353-44b9-b3f6-dad1c049c79c": {
+                                "id": 346,
+                                "name": "BIG08-503S"
+                            },
+                            "afaa88f4-9e4a-45f2-b7bd-7127e8345208": {
+                                "id": 334,
+                                "name": "ULT13-RECEMA"
+                            },
+                            "b741d59e-c51c-4f89-b1a5-d7f4964b00ec": {
+                                "id": 369,
+                                "name": "BIG05-408N"
+                            },
+                            "ba2ec694-c4d9-45e2-a34d-879a94f785a0": {
+                                "id": 323,
+                                "name": "ULT19-VIAPARK"
+                            },
+                            "bccc8071-7f51-3e53-9988-15bdd06ce5bf": {
+                                "id": 249,
+                                "name": "BIG10-PAINE"
+                            },
+                            "bd3b537b-d118-4499-9897-396318b36e4d": {
+                                "id": 356,
+                                "name": "BIG17-QI11"
+                            },
+                            "bf9bd5d1-8733-4484-aa50-d25d056baff7": {
+                                "id": 340,
+                                "name": "ACS02-413S"
+                            },
+                            "c25dae31-8788-3463-b003-70088bb80f3c": {
+                                "id": 252,
+                                "name": "BIG03-413S"
+                            },
+                            "c5cf64d0-0181-3b34-92a4-fe769f0a341c": {
+                                "id": 281,
+                                "name": "BIG05-408N"
+                            },
+                            "c6098b99-2732-3e65-8e4d-b848ba3033cd": {
+                                "id": 256,
+                                "name": "ULT05-PLJK"
+                            },
+                            "c6e7edcf-eeba-3167-a7c2-f96c200a7eda": {
+                                "id": 274,
+                                "name": "INDUSPAN"
+                            },
+                            "cb0914b4-b27a-3bbd-ab13-01498b7faee1": {
+                                "id": 242,
+                                "name": "BIG19-CAST"
+                            },
+                            "cbfa6ea2-0795-38d4-b104-2f0f8181248f": {
+                                "id": 253,
+                                "name": "ULT15-SOLNA"
+                            },
+                            "cf39c507-6de7-47f8-996a-ead03eb710ee": {
+                                "id": 337,
+                                "name": "ULT16-PRPARK"
+                            },
+                            "d13cccf1-8e1d-3b9b-90e4-a6c83638ae7f": {
+                                "id": 276,
+                                "name": "BIG21-CNB12"
+                            },
+                            "d1d880d3-00f3-4ebc-8fc0-a2a9ba1ee3ee": {
+                                "id": 349,
+                                "name": "BIG04-301SW"
+                            },
+                            "d43c56db-b7c8-3ad3-96cd-f3773282598a": {
+                                "id": 251,
+                                "name": "ULT14-AGUASL"
+                            },
+                            "d54ca956-f913-4b03-86ec-a9cae223fe75": {
+                                "id": 350,
+                                "name": "BIG21-CNB12"
+                            },
+                            "d59f13fb-9651-3054-b220-b2008e46612b": {
+                                "id": 264,
+                                "name": "ULT17-SAMAMB"
+                            },
+                            "d5bfa6d3-8c90-418c-8f4d-27c3e0447c9d": {
+                                "id": 343,
+                                "name": "ACS06-QI11"
+                            },
+                            "d6e0c6c1-1a88-4d58-9b10-ff9f4063cb94": {
+                                "id": 344,
+                                "name": "ACS01-CAST"
+                            },
+                            "da1f20c8-19dc-4cd0-b87e-a615a9d88a0b": {
+                                "id": 358,
+                                "name": "BIG11-310N"
+                            },
+                            "df5248ac-88ac-412e-bc4a-0cb054328992": {
+                                "id": 355,
+                                "name": "BIG09-PEN"
+                            },
+                            "dffc8f1e-263a-4095-9ada-0ec31ab2a902": {
+                                "id": 304,
+                                "name": "Unidade 4"
+                            },
+                            "e2715e54-17ce-4772-b278-681e871fda59": {
+                                "id": 321,
+                                "name": "ULT20-TAGS"
+                            },
+                            "e54fa7b8-df89-3fd4-9aa9-1e71d6028278": {
+                                "id": 275,
+                                "name": "ULT08-ARAP"
+                            },
+                            "e5d92840-4c4f-3eda-bd1d-ea98751ee2c5": {
+                                "id": 250,
+                                "name": "ULT13-RECEMA"
+                            },
+                            "e72c2eaf-5cd1-3601-a390-67b5adc47c73": {
+                                "id": 294,
+                                "name": "ULT19-VIAPARK"
+                            },
+                            "e86ce7b6-df0e-399b-be3b-c56e6334a09b": {
+                                "id": 262,
+                                "name": "BIG23-SOLE"
+                            },
+                            "e8d19438-d294-434f-880c-4affc6498c04": {
+                                "id": 315,
+                                "name": "TOTAL021"
+                            },
+                            "e9a1f70e-9426-4b5b-a1f8-8b55eaa50e0e": {
+                                "id": 347,
+                                "name": "BIG20-TAGC1"
+                            },
+                            "eae6453b-c8a0-30bc-a525-1215fef01f18": {
+                                "id": 287,
+                                "name": "ULT11-ITAPOA"
+                            },
+                            "ee1e3bd8-6c31-4c6a-9b0f-472023425351": {
+                                "id": 364,
+                                "name": "BIG23-SOLE"
+                            },
+                            "f0f39128-a0a0-40f2-9084-6f55db186d34": {
+                                "id": 313,
+                                "name": "Unidade 6"
+                            },
+                            "f291a8ed-e11d-4526-999f-707a13055479": {
+                                "id": 331,
+                                "name": "ULT03-COL"
+                            },
+                            "f612c26a-8733-3fc7-b161-820f28959c38": {
+                                "id": 288,
+                                "name": "BIG22-102NW"
+                            },
+                            "f9ee6e15-2add-4ace-b27a-8637bae088ea": {
+                                "id": 357,
+                                "name": "BIG14-508S"
+                            },
+                            "fa80a012-34ef-437c-828d-21685964e19e": {
+                                "id": 317,
+                                "name": "ULT12-SAOSEB"
+                            },
+                            "fb0492c2-02ce-3c6d-ab7d-b7776ec6334b": {
+                                "id": 291,
+                                "name": "BIG13-QI05"
+                            },
+                            "fdbb82a0-4610-4d40-92fa-98acb6a3dbdc": {
+                                "id": 325,
+                                "name": "ULT10-ESTR"
+                            },
+                            "fe66aadd-8c22-4772-8050-4df664f174f3": {
+                                "id": 311,
+                                "name": "INDUSPAN"
+                            }
+                        }
+                    },
+                    "17a3d6be-6a3e-4c0b-8d5e-fe23a9b22879": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 139,
+                        "name": "Carla.atacadista@uorak.com",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "1b44548f-0091-40ec-9fb7-2b7e6a490178": {
+                        "directPermissions": {},
+                        "groups": [
+                            "75118468-e0d4-4221-9416-c348354290a6"
+                        ],
+                        "id": 296,
+                        "name": "Edson",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "1bf96bb9-a7d8-42ae-89e9-d142fe55f56e": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 302,
+                        "name": "Tew",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "208b333b-9b0e-411d-b3bf-ad84d2e3b5b7": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 39,
+                        "name": "Teste1",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "2880bb94-e6de-4e02-b864-fd54daa4042f": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 236,
+                        "name": "novoemailparavalidacao@uorak.com",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "2f3d0c6c-afbe-4569-b8cd-a72cf098f1ca": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 52,
+                        "name": "Oliver",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "3365e112-1736-4cbf-8512-f34802cbe6e9": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 58,
+                        "name": "Caio",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "35ff4069-02b5-4736-8550-99e72053f7bc": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 73,
+                        "name": "Catarina",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "3b6c3f69-c663-4b75-962e-1d4c8e302b34": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 165,
+                        "name": "User",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "3d978ab9-8f7c-4dd2-92d4-cdd3ec912fd4": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 80,
+                        "name": "suzanadeoliveira79@gmail.com",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "3f6e4ae2-20f7-47ec-9d13-860815e7a3aa": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 290,
+                        "name": "Dev",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "43a4e645-73a0-4bda-baf4-b5ac0c9a528d": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 262,
+                        "name": "Usuário",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "454b870c-871d-426d-a247-74c9b58d3e7b": {
+                        "directPermissions": {},
+                        "groups": [
+                            "0e0c5b07-be5a-4e89-a893-17e811834113"
+                        ],
+                        "id": 7,
+                        "name": "Michel",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "cf39c507-6de7-47f8-996a-ead03eb710ee": {
+                                "id": 337,
+                                "name": "ULT16-PRPARK"
+                            }
+                        }
+                    },
+                    "4d44f1a2-e45e-4e17-8abc-53d6a4f2d739": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 59,
+                        "name": "Enzo",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "50e16e9b-30e0-4956-b4ec-d6d4a779af83": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 67,
+                        "name": "Caio",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "5239265d-ad99-4753-a025-436c0110ff1b": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 65,
+                        "name": "giovanni",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "52b94d24-c694-41e4-aae9-d0394d4b4d98": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 11,
+                        "name": "Renan",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "5598f67c-9f6b-4fd9-afc7-2c851d40c15b": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 66,
+                        "name": "Bruna",
+                        "role": "bc82508e-4987-4d77-8b7e-dd88c9f1cf99",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "57aa618a-6477-4a29-b59c-093fb5dd8fff": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 62,
+                        "name": "Roberto",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "590eff9f-3069-4137-8461-b71893035b80": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 69,
+                        "name": "Testeee",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "5959097a-e271-40ce-94e1-fca4889ad1ea": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 140,
+                        "name": "Monica",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "5f521b38-d5bb-4b57-83dc-fc6e655161bd": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 74,
+                        "name": "Danilo",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "613e928b-1162-4639-9f6c-9488c6b6fd4b": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 1,
+                        "name": "Sys Admin",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {}
+                    },
+                    "66062618-e502-4541-8baf-2afde23760d9": {
+                        "directPermissions": {},
+                        "groups": [
+                            "75118468-e0d4-4221-9416-c348354290a6"
+                        ],
+                        "id": 3,
+                        "name": "Marcelo",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "4d51a223-cf8d-35c4-84e5-a09fc2db9701": {
+                                "id": 293,
+                                "name": "ULT23-SMARIA"
+                            },
+                            "893c938b-164b-38ce-9616-2286bbb4ac6b": {
+                                "id": 258,
+                                "name": "ULT01-PLANDF"
+                            }
+                        }
+                    },
+                    "6791c22e-c661-4f5c-a9e4-9dbbe368dbee": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 176,
+                        "name": "teste luma",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "67d86159-80ca-451b-8290-70f7096bcdf1": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 167,
+                        "name": "Teste1",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "69cafbf3-3047-488b-b14c-6245c0d7b132": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 138,
+                        "name": "Márcia Sarah",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "6dbf7558-cfb4-48bd-9408-3fe735fa1d0c": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 53,
+                        "name": "Lucia",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "7083b696-e00f-44ee-87e6-68f2d63de4e2": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 70,
+                        "name": "Colab 15",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "70c983be-6391-4808-bc85-82a2d2fe943b": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 71,
+                        "name": "Sueli",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "7229c9c6-5b6e-4797-a385-27c3115ce92c": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 76,
+                        "name": "Elza",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "75e4b488-7b55-482b-8acb-397343bcd668": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 40,
+                        "name": "Gustavo",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "7b80c6ba-4b2d-4981-8ddc-2cd1d73a2e7a": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 212,
+                        "name": "Teste1",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "7d672c06-e6ec-4207-8130-2400c85ddd76": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 68,
+                        "name": "Caue",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "7fa84983-6c32-49d8-80eb-3874c1e469a2": {
+                        "directPermissions": {},
+                        "groups": [
+                            "0e0c5b07-be5a-4e89-a893-17e811834113"
+                        ],
+                        "id": 9,
+                        "name": "Suzana",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "8131e5e0-1242-4a69-aeb9-3afab06bc5db": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 171,
+                        "name": "teste@teste.com",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "8273a00e-1ab3-44c2-b28b-6b93ee49ef8f": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 63,
+                        "name": "Jaqueline",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "8430c82e-2c30-4f0f-974a-5abc584a3ccb": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 168,
+                        "name": "Teste1",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "8f1fad62-5acd-4527-80cd-46ff4f24f74d": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 137,
+                        "name": "Bruno.mercadista@uorak.com",
+                        "role": "bc82508e-4987-4d77-8b7e-dd88c9f1cf99",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "9814ab19-dd56-47c3-b4e0-c8f96e8f3073": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 150,
+                        "name": "Teste1",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "9f657540-766b-46e0-ba54-01b6c5017cfe": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 8,
+                        "name": "Letícia",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "a1915e0a-a5c1-4a19-8737-52ea79ac57c3": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 5,
+                        "name": "Gian",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "a996be1f-9e5d-4285-b930-c8d080243ec7": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 28,
+                        "name": "Bruno",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "cf39c507-6de7-47f8-996a-ead03eb710ee": {
+                                "id": 337,
+                                "name": "ULT16-PRPARK"
+                            }
+                        }
+                    },
+                    "adc522f4-88f9-4a0e-a8cd-ddfca99dd65d": {
+                        "directPermissions": {},
+                        "groups": [
+                            "75118468-e0d4-4221-9416-c348354290a6"
+                        ],
+                        "id": 4,
+                        "name": "Felipe",
+                        "role": "2a38b6c6-4b0c-4a7f-838e-37b7a7bfcefd",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "cf39c507-6de7-47f8-996a-ead03eb710ee": {
+                                "id": 337,
+                                "name": "ULT16-PRPARK"
+                            }
+                        }
+                    },
+                    "b3a9a16c-9dfa-401d-b732-0d51b8c75ecf": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 10,
+                        "name": "Hoberdan",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "b75fe00c-8952-4f49-9157-12380b83f404": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 55,
+                        "name": "Hugo",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "b92e9e24-4ff3-4fc1-b31f-23e7421dd39a": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 142,
+                        "name": "Braulio",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "bd5fe031-a0ac-4076-a186-0edbc21b0da2": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 72,
+                        "name": "Aparecida",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "17dc1422-2aeb-4524-9937-6880c073442c": {
+                                "id": 302,
+                                "name": "Unidade 5"
+                            },
+                            "1e4a2ac7-1274-4f55-897d-3fe547ba7262": {
+                                "id": 305,
+                                "name": "Unidade 5"
+                            },
+                            "2c62da83-9f56-4b17-affe-2ffe4bb4de7b": {
+                                "id": 314,
+                                "name": "Unidade 9"
+                            },
+                            "51e03e21-cb4d-4fea-80cf-a9e3eacc7c9c": {
+                                "id": 307,
+                                "name": "Unidade 6"
+                            },
+                            "649ed3ed-348a-4023-b29c-d43d2263d0aa": {
+                                "id": 303,
+                                "name": "Unidade 8"
+                            },
+                            "7283fe96-d914-439e-bc86-7f8a444192b9": {
+                                "id": 298,
+                                "name": "TOTAL01"
+                            },
+                            "778798a8-dd25-4472-9ea5-a582272c81f9": {
+                                "id": 306,
+                                "name": "Unidade 3"
+                            },
+                            "7a6a9839-4bb0-3a18-b19c-3354fc44d244": {
+                                "id": 283,
+                                "name": "BIG09-PEN"
+                            },
+                            "816b4901-ed7b-4c62-9c30-ad7add0263dc": {
+                                "id": 309,
+                                "name": "Unidade 2"
+                            },
+                            "8569f737-01f6-32a2-8157-fc18ebefb7a1": {
+                                "id": 268,
+                                "name": "BIG18-211N"
+                            },
+                            "8a1f7f3d-4361-4793-9dcc-49c4608c2ec8": {
+                                "id": 301,
+                                "name": "Unidade 6"
+                            },
+                            "97981ddf-8139-4d27-a659-c8941ffbabd1": {
+                                "id": 297,
+                                "name": "MATRIZ"
+                            },
+                            "c6e7edcf-eeba-3167-a7c2-f96c200a7eda": {
+                                "id": 274,
+                                "name": "INDUSPAN"
+                            },
+                            "d13cccf1-8e1d-3b9b-90e4-a6c83638ae7f": {
+                                "id": 276,
+                                "name": "BIG21-CNB12"
+                            },
+                            "dffc8f1e-263a-4095-9ada-0ec31ab2a902": {
+                                "id": 304,
+                                "name": "Unidade 4"
+                            },
+                            "e5d18dd1-9bf2-393d-a5e1-ca809916885e": {
+                                "id": 279,
+                                "name": "ULT21-PLANGO"
+                            },
+                            "e8d19438-d294-434f-880c-4affc6498c04": {
+                                "id": 315,
+                                "name": "TOTAL021"
+                            },
+                            "f0f39128-a0a0-40f2-9084-6f55db186d34": {
+                                "id": 313,
+                                "name": "Unidade 6"
+                            },
+                            "fe66aadd-8c22-4772-8050-4df664f174f3": {
+                                "id": 311,
+                                "name": "INDUSPAN"
+                            }
+                        }
+                    },
+                    "be087b95-ae70-423a-928c-9803d75901e7": {
+                        "directPermissions": {},
+                        "groups": [
+                            "0e0c5b07-be5a-4e89-a893-17e811834113"
+                        ],
+                        "id": 12,
+                        "name": "Leandro",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {
+                            "4d51a223-cf8d-35c4-84e5-a09fc2db9701": {
+                                "id": 293,
+                                "name": "ULT23-SMARIA"
+                            },
+                            "cf39c507-6de7-47f8-996a-ead03eb710ee": {
+                                "id": 337,
+                                "name": "ULT16-PRPARK"
+                            }
+                        }
+                    },
+                    "be1972a8-8201-4c63-ad67-2d1cbbdb70f4": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 49,
+                        "name": "smodesto@upvarejo.com.br",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "bf98766f-ed53-4b25-9664-fcde75499c78": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 54,
+                        "name": "Julio",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "c65707f5-b7ca-499f-b85a-b5900f6d836f": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 60,
+                        "name": "Enrico",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "c8e90de1-3823-4575-b763-b1fa32fd1be9": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 64,
+                        "name": "Rosangela",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "c95c35a9-54db-449d-8ae9-8c8636a54252": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 75,
+                        "name": "Bruna",
+                        "role": "bc82508e-4987-4d77-8b7e-dd88c9f1cf99",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "d61259a8-b7ee-4ea2-9d09-71b4b5aaf5b9": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 166,
+                        "name": "User",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "daa5088d-72f9-45db-bb2a-5e66afd59ee3": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 61,
+                        "name": "Breno",
+                        "role": "bc82508e-4987-4d77-8b7e-dd88c9f1cf99",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "e02693a0-4a60-4756-859e-6bc1a6d40fe5": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 130,
+                        "name": "Usuário",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "e071b5e0-16f5-48cd-a860-2c12e3009969": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 50,
+                        "name": "suzanaoliv79@gmail.com",
+                        "role": "2a38b6c6-4b0c-4a7f-838e-37b7a7bfcefd",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "e0875f67-fc87-4adf-826b-b8b3d5bf6010": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 77,
+                        "name": "Yago",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "e2820f6b-ad20-434b-993f-63a4ecee2700": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 56,
+                        "name": "Sophia",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "e591592d-9a8f-438c-bd94-01d9df56354e": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 304,
+                        "name": "joselia",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "eb62123d-e021-4bdb-82ea-645a4029579d": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 129,
+                        "name": "Design ",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "eca239e0-ef4b-45d3-bc4a-72fa9e203a60": {
+                        "directPermissions": {},
+                        "groups": [
+                            "0e0c5b07-be5a-4e89-a893-17e811834113"
+                        ],
+                        "id": 14,
+                        "name": "Genuir",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "eee9d8e4-dda0-4d1f-8416-2f6172bbc38b": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 175,
+                        "name": "luma",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "f7629842-420f-4399-b343-fa2e6c9a6301": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 152,
+                        "name": "Grace",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "feec2ac5-dd32-499b-8abc-5307464fa686": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 41,
+                        "name": "Gustavo",
+                        "role": "e1c3ac1e-76d9-43c4-914f-47f8ca9e5e3d",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    }
+                }
+            },
+            "6b9858db-c15f-4a8d-b1c6-30c8f1e85d34": {
+                "groups": {},
+                "id": 697,
+                "name": "Apresentação",
+                "rolePermissions": {
+                    "3f8e0de6-25dd-46d3-b7b1-3734ce8e3da8": {
+                        "name": "Administrador",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "48c6745e-3cd3-4d96-9f15-35191073067a": {
+                        "name": "Supervisor",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "5cfac977-b580-4b4a-901d-dbcba6b67115": {
+                        "name": "Padrão",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "09468852-7a81-4990-afa6-055e3f50e528": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 134,
+                        "name": "Sys",
+                        "role": "5cfac977-b580-4b4a-901d-dbcba6b67115",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {}
+                    },
+                    "3bea46f6-3d9e-4603-a6d9-0a492bf52ad4": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 283,
+                        "name": "John",
+                        "role": "5cfac977-b580-4b4a-901d-dbcba6b67115",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    }
+                }
+            },
+            "6cb3a2b0-d38f-4ba8-94b9-978561566ba5": {
+                "groups": {},
+                "id": 703,
+                "name": "BigBox",
+                "rolePermissions": {
+                    "0a9da4f9-ec5a-4bcf-b768-83cc9cc007e5": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "10ab4f2c-684e-4475-8005-0814875fa108": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "123ab477-f744-4d80-a2e6-a56da93ab790": {
+                        "name": "Padrao",
+                        "permissions": []
+                    },
+                    "142133cf-5aff-4b28-abf1-5df43a2aeaff": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "1bbd86b1-a30f-45c4-ac6e-0f1f645f599b": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "1daeaf11-25db-4f01-ae6a-900d00587b19": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "22675ee1-5ce7-4b6f-8afe-5168a01e9d1d": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "26c82d58-9a1f-450f-87a9-cd491b82c1c5": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "285ec94a-0529-4aa4-a587-7ec4ed7dca93": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "285efc58-4718-484e-8a2e-3f170b2b1eef": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "29f58060-eabe-4e8a-9061-936853f2d0ab": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "2ca6cf79-5c28-423f-b16a-7b301771dd19": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "33d6405d-2f88-4a32-ab2b-c677c6e1489a": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "37879784-11d8-4bac-a606-2206edfd04d0": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "3ac8bdbd-8a4b-497d-a28d-f0f71f488880": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "4028af06-7b17-4afc-930c-922256a9595e": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "4e8251d0-d9ec-4517-9488-17d26e41dfda": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "51d876b6-af95-4c06-8ba3-a0732e2e99a6": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "51e47359-f577-42bc-9fc2-fb9171915850": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "582ad6a7-1873-45f1-b009-d7a21a568192": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "5b13167e-9dae-4ef9-b91d-20beff103a45": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "5cf2adfc-3f54-4e4c-80ef-bf9cfd878ba0": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "5d804c43-3936-4c4d-a68d-55b5059cec83": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "600367dd-3f71-4f0c-8e50-942db3b92eaf": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "61fe681d-fa69-49ec-b813-9b3a43d392ad": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "67549126-c9e7-47f3-983c-837cb646a50e": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "68d7e453-6aa5-431f-809a-5e66b53b363d": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "7044b2a5-206e-4e58-be37-16377dcdd1b6": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "704da8b7-a7aa-4411-9e6d-4e63b7dfef19": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "763afee6-ca04-47e4-b6c9-cf5b5855ee37": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "77a7281d-9aa9-49fb-8d14-2d57cbe74ab6": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "78152b6e-633b-4734-be42-4e8e8e98509e": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "7a6f6ba8-69bf-4d6f-a8b1-e1e4e4aedf15": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "7b1eeab0-d26f-4e15-971d-c5a7c563b939": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "7c573322-ac6c-4b81-9799-924920ed7450": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "7fd03c17-46b7-4317-b19a-91843476327c": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "803225b6-dcf0-4f17-8fae-0f3c72f3cf06": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "820e72ba-0c14-4bb8-b934-c8b850ae8512": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "83d363a6-3f35-44d3-8f4b-0aa818e0a531": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "86d860c6-a790-4ab4-983b-cf14fe94fcff": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "87408dca-ee76-450b-818f-5bf061138fda": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "8759b3c5-6fcd-4dcf-8695-37f8fa02240e": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "8aa32e89-752f-4dcb-9f6e-213fd1e5cb54": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "8ad72468-ee07-4b6d-9a16-8e7855deb991": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "8b631224-dc57-429b-95e1-93f7e93c4691": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "8c05878e-fea8-47e5-88d2-9c025091155d": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "90a3fc57-27b7-4295-90af-6d9c15fd3da7": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "91b631b8-1975-45e1-ac72-dc1e4fa505e0": {
+                        "name": "Supervisor",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "9d648a22-b1e9-4f4b-af35-24e90a8c3871": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "a93f3d9d-ddca-4ad1-b48a-99302d339ba3": {
+                        "name": "SysAdmin",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "b150bac8-14cf-4399-9a72-cbc0a0a8229d": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "b16eadbf-92df-4ffc-ad33-93c411618eb6": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "b537185e-a72a-49e2-867c-f6389b1c07c3": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "b760cf08-eb38-4912-83c4-8550c946cf85": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "be555af5-af83-4afe-ac45-e2a69bb7268c": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "c24e9b07-ba88-4156-aea4-c73a54025986": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "c62ee592-9e48-4f1d-96c5-05851c8b14f6": {
+                        "name": "Padrao",
+                        "permissions": []
+                    },
+                    "cfbff5ac-1c8e-4331-8a61-f6af0442dd63": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "d2c8f2ee-d0f2-45b7-8960-0da1925f9171": {
+                        "name": "Administrador",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "d4dc03b9-7455-462b-9996-a9e813ccc7a4": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "d687b207-3b96-4298-88ef-19a27cd9dc80": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "e1c2c2c7-a830-4353-9e99-c753ae8ceda0": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "e97dc53d-8aa6-4865-b7a4-204fcbd6c558": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "f06d1e96-57b7-4eb9-90ee-304243899509": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "f1c7de6c-4118-4829-9886-185b1e1ebb55": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "f771ba72-d748-406d-ad06-857b89ef8af3": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "f89cad80-9b06-4b83-a270-5f2e5cee56b4": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "f981c899-a9ac-449c-86df-5fae84634a37": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "89df2193-ee29-4f18-b5db-858267b81232"
+                        ]
+                    },
+                    "fa5b7fa0-e0d0-4a2a-b356-338ed82804b9": {
+                        "name": "Padrao",
+                        "permissions": [
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "75ae1ad0-c1aa-48f2-a14f-de5642e76de7": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 301,
+                        "name": "Admin",
+                        "role": "fa5b7fa0-e0d0-4a2a-b356-338ed82804b9",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {}
+                    }
+                }
+            },
+            "76f85560-0e57-4474-a727-322d389f514b": {
+                "groups": {},
+                "id": 699,
+                "name": "Teste Marcelo",
+                "rolePermissions": {
+                    "43d7f34c-8702-4139-9991-6d1c41f530b3": {
+                        "name": "Padrão",
+                        "permissions": []
+                    },
+                    "b00206a4-ef25-4ed4-9ca7-299f5492b747": {
+                        "name": "Administrador",
+                        "permissions": []
+                    },
+                    "f51ce088-29d5-4d93-860d-69fe376e24c1": {
+                        "name": "Supervisor",
+                        "permissions": []
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "e77bc22f-013e-4a7d-acf1-7b1116c9fd51": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 242,
+                        "name": "Flávio",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {}
+                    }
+                }
+            },
+            "99cc4b23-e6e9-4cb7-976b-ef062891d8c2": {
+                "groups": {},
+                "id": 701,
+                "name": "PANIFICADORA SANTO ANTONIO",
+                "availableActions": [
+                    "00fe2f36-4e61-4f53-8b00-8fd742efb7f8"
+                ],
+                "rolePermissions": {
+                    "311002a2-064d-4435-986e-a77c671392b8": {
+                        "name": "311002a2-064d-4435-986e-a77c671392b8",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "31b83cb2-1c98-4981-80ec-afe54f46bf99": {
+                        "name": "Padrão (Cópia NaN)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "4eca809f-c4c2-4537-8b92-3a1b83688156": {
+                        "name": "fewfewfewf",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "5b98ec88-95cc-4d5c-a9bc-0204f0a8c5d2": {
+                        "name": "Padrão (Cópia) teste",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "6d4911b2-070b-4399-9386-62c5dacf10c8": {
+                        "name": "Padrão (Cópia) teste (Cópia)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "6e6541bc-97aa-405a-90ab-d42e9902cfcb": {
+                        "name": "operador",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "6eb873cd-3d17-4bc7-8b08-a443fd07ccf2": {
+                        "name": "Padrão (Cópia NaN)",
+                        "permissions": [
+                            "3fa4ea30-8557-4223-b898-1fab9655f03e",
+                            "1162d62e-3dfa-4964-9e61-78bba5a189f2",
+                            "457c260e-042b-492c-82de-8f0f32ba9511",
+                            "c0a0088a-ef03-4943-8ab6-0f84f2d58459",
+                            "786ab3e6-173f-4a4a-b83d-885db76d50de",
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "961202ea-17ab-488f-84fc-4093d02a48e1",
+                            "89df2193-ee29-4f18-b5db-858267b81232",
+                            "80c49aed-b914-4862-8e8f-97f89d7e8463",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "6f68835f-692f-48b6-8766-b4d7d0febfdb": {
+                        "name": "Administrador testes",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "77e9cdf2-ba5a-4175-8d73-7441204aca44": {
+                        "name": "Padrão (Cópia NaN)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "858f317c-9c19-4b86-a50e-ba1c430b8f2b": {
+                        "name": "Padrão (Cópia NaN)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "8b0a3b36-aa5d-4680-bda5-3c9ed4acb520": {
+                        "name": "Padrão (Cópia NaN)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "935a705d-396b-4c45-9773-054d95a43f97": {
+                        "name": "Supervisor (Cópia)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "9a3f9c68-ecc6-4e1f-8028-e4393ddb9939": {
+                        "name": "Supervisor (Cópia 1)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "ad8fcf5a-49f1-4209-b616-0cceca6aa793": {
+                        "name": "fewfewfewf (Cópia)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "c6af505b-9b70-4e98-a118-c0e39983d63a": {
+                        "name": "Padrão",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "d1a9fc6e-39ca-4b7f-8ac8-644ee5c0e3d2": {
+                        "name": "Supervisor (Cópia NaN)",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "e24900a0-7881-455e-bc36-15faca9c9b46": {
+                        "name": "Supervisor (Cópia 2) teste",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "fdefdf1a-87ac-4e04-85a2-4cc200afd9eb": {
+                        "name": "cfewfew",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "9236ee7e-a55f-48eb-a259-7c6410ad2d23",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    },
+                    "ff043338-0857-4fd2-bf92-b5d1b8a33db0": {
+                        "name": "Supervisor",
+                        "permissions": [
+                            "07e1f28b-8384-4204-8d82-4303cd18ee96",
+                            "d6029faf-97b0-4758-8cd4-732bcc3dfd98",
+                            "09d85691-e6fd-448e-975b-55373406d026",
+                            "52899104-5f9c-4ce7-98f7-9c6db8d29509",
+                            "90577512-5f72-406a-815d-2a6a8eb9a082"
+                        ]
+                    }
+                },
+                "sharing": {
+                    "e8144cbc-7224-416c-bd51-89a0871f155a": {
+                        "createdAt": "2025-05-12T16:53:03.785Z",
+                        "entity": "statementModel",
+                        "groupExceptions": [],
+                        "groups": [],
+                        "objectId": "d541abd7-9b6f-4a95-9a70-5c715b1eac46",
+                        "ownerUuid": "07ecace4-69bd-4a0d-90ae-7591bd59f9dc",
+                        "users": [
+                            "25477b83-9c08-4d90-a6b9-5b30396e2cfc"
+                        ]
+                    }
+                },
+                "users": {
+                    "07ecace4-69bd-4a0d-90ae-7591bd59f9dc": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 299,
+                        "name": "Marcelo",
+                        "role": "5cfac977-b580-4b4a-901d-dbcba6b67115",
+                        "sharings": [
+                            "e8144cbc-7224-416c-bd51-89a0871f155a"
+                        ],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "0c859261-412d-4cd9-8842-3642177dc356": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 306,
+                        "name": "Flavio",
+                        "role": "5cfac977-b580-4b4a-901d-dbcba6b67115",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "25477b83-9c08-4d90-a6b9-5b30396e2cfc": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 289,
+                        "name": "raju",
+                        "role": "c6af505b-9b70-4e98-a118-c0e39983d63a",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {
+                            "d2e97dde-918f-3ba0-971a-eff3f36427e1": {
+                                "id": 482,
+                                "name": "BIG01-106N"
+                            }
+                        }
+                    },
+                    "871fd9be-de76-42f8-bbc5-e573a17a66e8": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 307,
+                        "name": "Flavio",
+                        "role": "5cfac977-b580-4b4a-901d-dbcba6b67115",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "99723316-4130-4706-957a-18666484f76e": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 298,
+                        "name": "Anderson",
+                        "role": "5cfac977-b580-4b4a-901d-dbcba6b67115",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    }
+                }
+            },
+            "d77d8e0d-bcd3-473d-97ab-2760b203a73d": {
+                "groups": {},
+                "id": 698,
+                "name": "SUPERMERCADO PORECATU",
+                "rolePermissions": {
+                    "ab79eff8-7c26-4d08-90a7-2da430710c61": {
+                        "name": "Padrão",
+                        "permissions": []
+                    },
+                    "e0a14b06-02f4-4c3a-8a4a-91a5752a8a97": {
+                        "name": "Administrador",
+                        "permissions": []
+                    },
+                    "e60bcf8e-469d-48c5-a3ba-2251fb5c0932": {
+                        "name": "Supervisor",
+                        "permissions": []
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "c49699e6-0d82-4f09-98ea-657f21bffa4a": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 143,
+                        "name": "Sis ",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {}
+                    }
+                }
+            },
+            "d9b4a034-8554-4c64-9e64-6d28493d29c6": {
+                "groups": {},
+                "id": 2,
+                "name": "Gabriel",
+                "rolePermissions": {
+                    "6897a412-16d8-4b4e-9f37-9fb606ab697f": {
+                        "name": "Padrão",
+                        "permissions": []
+                    },
+                    "aadc5c62-d63f-40f4-b441-4eb9091ad480": {
+                        "name": "Admin",
+                        "permissions": []
+                    },
+                    "e644bdee-66ca-465b-bfa4-f7b7aefea29e": {
+                        "name": "Supervisor",
+                        "permissions": []
+                    },
+                    "e9712fdc-68af-4672-908e-25a143d1b6d3": {
+                        "name": "Admin",
+                        "permissions": []
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "7d73fce2-91cf-4b05-8a4f-edff37bd46e5": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 18,
+                        "name": "Gabriel",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    }
+                }
+            },
+            "fe7046f4-de19-4125-8812-fecec85ac46f": {
+                "groups": {},
+                "id": 62,
+                "name": "PARANA SUPERMERCADOS",
+                "rolePermissions": {
+                    "27e85551-d389-4edb-bc4e-7ad6e8ec1640": {
+                        "name": "Administrador",
+                        "permissions": []
+                    },
+                    "94c61324-17f1-492a-839c-b90ebe004361": {
+                        "name": "Padrão",
+                        "permissions": []
+                    },
+                    "da9efa3d-5052-4fde-a3dc-93f1939a64c4": {
+                        "name": "Supervisor",
+                        "permissions": []
+                    }
+                },
+                "sharing": {},
+                "users": {
+                    "21f07871-8b96-4eac-ad61-32bcd0c4162d": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 145,
+                        "name": "mcouto@rdias.com.br",
+                        "sharings": [],
+                        "sysadmin": false,
+                        "units": {}
+                    },
+                    "589d88e4-0528-4804-ae66-bfa44fa3c88a": {
+                        "directPermissions": {},
+                        "groups": [],
+                        "id": 19,
+                        "name": "Sysadmin",
+                        "sharings": [],
+                        "sysadmin": true,
+                        "units": {}
+                    }
+                }
+            }
+        }
+}
