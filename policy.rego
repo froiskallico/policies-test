@@ -17,6 +17,11 @@ user_data(userUuid) := result if {
 	result := user
 }
 
+customer_available_actions(customerUuid) := result if {
+	customer := customer_data(customerUuid)
+    result := customer.availableActions
+}
+
 # Verifica se o usuário tem uma permissão específica baseada no seu papel na unidade (role permission)
 check_user_has_role_permission(userUuid, action) if {
 	user := user_data(userUuid)
@@ -65,11 +70,11 @@ can_user_perform_action(userUuid, action) if {
 can_user_perform_action(userUuid, action) if {
 	action == action
 	userUuid == userUuid
-	user_is_sysadmin(userUuid)
+	check_user_is_sysadmin(userUuid)
 }
 
 # Regra para verificar se o usuário é sysadmin
-user_is_sysadmin(userUuid) if {
+check_user_is_sysadmin(userUuid) if {
 	user := user_data(userUuid)
 	user.sysadmin == true
 }
@@ -101,13 +106,15 @@ default user_allow := false
 
 user_allow if {
 	input.user
-	user_is_sysadmin(input.user)
+	check_user_is_sysadmin(input.user)
 }
 
 user_allow if {
 	input.user
 	can_user_perform_action(input.user, input.action)
 }
+
+user_is_sysadmin := check_user_is_sysadmin(input.user)
 
 user_has_role_permission if check_user_has_role_permission(input.user, input.action)
 user_has_custom_permission if check_user_has_custom_permission(input.user, input.action)
@@ -146,7 +153,7 @@ unit_has_solution if {
 
 check_unit_has_solution(unitUuid, actionUuid) := result if {
 	unit := data.units[unitUuid]
-	action_solution_uuid := data.actions[actionUuid].solution
+	action_solution_uuid := customer_available_actions(input.customer)[actionUuid].solution
 	unit_solutions_ids := [uuid | uuid := key; _ := unit.solutions[key]]
 	result := action_solution_uuid in unit_solutions_ids
 }
@@ -172,10 +179,10 @@ check_user_has_module_and_unit_access(unitUuid, actionUuid) if {
 
 check_unit_has_module(unitUuid, actionUuid) := result if {
 	unit := data.units[unitUuid]
-	action_solution_uuid := data.actions[actionUuid].solution
+	action_solution_uuid := customer_available_actions(input.customer)[actionUuid].solution
 	solution_modules := unit.solutions[action_solution_uuid].modules
 	solution_modules_ids := [uuid | uuid := key; _ := solution_modules[key]]
-	action_module_uuid := data.actions[actionUuid].module
+	action_module_uuid := customer_available_actions(input.customer)[actionUuid].module
 	result := action_module_uuid in solution_modules_ids
 }
 
@@ -190,9 +197,9 @@ user_allowed_actions := result if {
 
 check_user_allowed_actions(userUuid) := [action |
 	action := [uuid | uuid := key; _ := data.actions[key]][_]
+    action in customer_available_actions(input.customer)
 	can_user_perform_action(userUuid, action)
 ]
-
 # ######################################################################################################
 # #                                       Display Map                                                  #
 # ######################################################################################################
