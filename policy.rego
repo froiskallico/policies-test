@@ -101,7 +101,6 @@ check_user_has_custom_disallowance(userUuid, action) if {
 ######################################################################################################
 #                                         Permissões Default                                         #
 ######################################################################################################
-
 default user_allow := false
 
 user_allow if {
@@ -228,6 +227,9 @@ sharing := result if {
 		"user_accessible_objects_ids": {x | x := all_user_accessible_objects(input.user)[_].objectId},
 	}
 }
+
+# Valor padrão da regra é false
+default user_can_perform_action_in_shared_object(_, _) := false
 
 # Usuario pode executar ação em objeto compartilhado se
 user_can_perform_action_in_shared_object(userUuid, objectId) if {
