@@ -17,6 +17,10 @@ user_data(userUuid) := result if {
 	result := user
 }
 
+action_data(action_uuid) := result if {
+	result := data.actions[action_uuid]
+}
+
 customer_available_actions(customerUuid) := result if {
 	customer := customer_data(customerUuid)
     result := customer.availableActions
@@ -125,6 +129,7 @@ unit_enabled_in_solution(unit_id, solution_id) if {
 # [DEBUG] Lista as unidades habilitadas para a solução
 units_enabled_in_solution := units if {
     is_unit_requested
+    action_data(input.action)
 
     units := [uid |
         action := data.actions[input.action]
@@ -135,9 +140,9 @@ units_enabled_in_solution := units if {
 # [DEBUG] Unidades habilitadas para o módulo
 module_units := units if {
     is_unit_requested
-    action := data.actions[input.action]
+    action := action_data(input.action)
     solution_id := action.solution
-    user := data.customers[input.customer].users[input.user]
+    user := user_data(input.user)
 
     units := [uid |
         unit_enabled_in_solution(uid, solution_id)
@@ -148,8 +153,9 @@ module_units := units if {
 # [DEBUG] Unidades habilitadas para a solução
 solution_units := units if {
     is_unit_requested
-    solution_id := data.actions[input.action].solution
-    user := data.customers[input.customer].users[input.user]
+    action := action_data(input.action)
+    solution_id := action.solution
+    user := user_data(input.user)
 
     units := [uid |
         unit_enabled_in_solution(uid, solution_id)
@@ -160,35 +166,64 @@ solution_units := units if {
 # [DEBUG] Identifica de onde as unidades vieram
 units_read_from := source if {
     is_unit_requested
-    action := data.actions[input.action]
+    action := action_data(input.action)
     not is_null(action.module)
     source := concat(": ", ["Module", action.module])
 }
 
 units_read_from := source if {
     is_unit_requested
-    action := data.actions[input.action]
+    action := action_data(input.action)
     is_null(action.module)
     source := concat(": ", ["Solution", action.solution])
 }
 
-# Retorna todas as unidades da solução se o usuário for sysadmin
+# Retorna todas as unidades DA SOLUÇÃO se o usuário for sysadmin
 user_units_for_action := result if {
     user_is_sysadmin
+    action_data(input.action)
     result := units_enabled_in_solution
 }
 
-# Retorna as unidades válidas para a ação considerando módulo ou solução
+# Retorna todas as unidades DO CLIENTE se o usuário for sysadmin e não houver ação especificada
 user_units_for_action := result if {
-    action := data.actions[input.action]
+    user_is_sysadmin
+    not action_data(input.action)
+    customer := customer_data(input.customer)
+    result := customer.units
+}
+
+# Retorna todas as unidades DO USUÁRIO se o mesmo NÃO FOR sysadmin e não houver ação especificada
+user_units_for_action := result if {
+    not user_is_sysadmin
+    not action_data(input.action)
+    user := user_data(input.user)
+    result := user_all_units(user)
+}
+
+# Retorna as unidades válidas para a ação considerando MÓDULO
+user_units_for_action := result if {
+    action := action_data(input.action)
     action.module != ""
     result := module_units
 }
 
+# Retorna as unidades válidas para a ação considerando SOLUÇÃO
 user_units_for_action := result if {
-    action := data.actions[input.action]
+    action := action_data(input.action)
     action.module == ""
     result := solution_units
+}
+
+# Função para iterar entre as unidades liberadas para soluções e módulos do usuário e retornar a lista completa
+user_all_units(user) = result if {
+    all_units := {unit_id |
+        some id
+        source := ["solutions", "modules"][_]
+        user.unitAccess[source][id].units[unit_id]
+    }
+
+    result := sort([unit_id | unit_id := all_units[_]])
 }
 
 # ######################################################################################################
