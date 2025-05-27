@@ -34,29 +34,21 @@ check_user_has_role_permission(userUuid, action) if {
 can_user_perform_action_via_role(userUuid, action) if {
 	check_user_has_role_permission(userUuid, action)
 	not check_user_has_custom_disallowance(userUuid, action)
-	not has_unit
 }
 
 can_user_perform_action_via_role(userUuid, action) if {
 	check_user_has_role_permission(userUuid, action)
 	not check_user_has_custom_disallowance(userUuid, action)
-	user_has_unit_permission
-	unit_has_solution
-	user_has_module_unit_access
 }
 
 can_user_perform_action_via_custom(userUuid, action) if {
 	check_user_has_custom_permission(userUuid, action)
 	not check_user_has_custom_disallowance(userUuid, action)
-	not has_unit
 }
 
 can_user_perform_action_via_custom(userUuid, action) if {
 	check_user_has_custom_permission(userUuid, action)
 	not check_user_has_custom_disallowance(userUuid, action)
-	user_has_unit_permission
-	unit_has_solution
-	user_has_module_unit_access
 }
 
 can_user_perform_action(userUuid, action) if {
@@ -78,8 +70,6 @@ check_user_is_sysadmin(userUuid) if {
 	user := user_data(userUuid)
 	user.sysadmin == true
 }
-
-has_unit := input.unit != null
 
 ################################################
 #        Permissões/Proibições custom          #
@@ -119,70 +109,86 @@ user_has_role_permission if check_user_has_role_permission(input.user, input.act
 user_has_custom_permission if check_user_has_custom_permission(input.user, input.action)
 user_has_custom_disallowance if check_user_has_custom_disallowance(input.user, input.action)
 
-######################################################################################################
-#                                  Permissão para unidade específica                                 #
-######################################################################################################
-user_has_unit_permission := false if {
-	has_unit
-	not check_unit_permission(input.user, input.unit)
+# ######################################################################################################
+# #                                        Unidades habilitadas                                        #
+# ######################################################################################################
+
+is_unit_requested if {
+    input.units == true
 }
 
-user_has_unit_permission if {
-	has_unit
-	check_unit_permission(input.user, input.unit)
+# Verifica se a unidade está habilitada na solução
+unit_enabled_in_solution(unit_id, solution_id) if {
+    data.solutionUnits[solution_id][unit_id]
 }
 
-check_unit_permission(userUuid, unitUuid) if {
-	user_units := user_data(userUuid).units
-	user_units[unitUuid]
+# [DEBUG] Lista as unidades habilitadas para a solução
+units_enabled_in_solution := units if {
+    is_unit_requested
+
+    units := [uid |
+        action := data.actions[input.action]
+        data.solutionUnits[action.solution][uid]
+    ]
 }
 
-######################################################################################################
-#                                      Verifica Unidade/Solução                                      #
-######################################################################################################
-unit_has_solution := false if {
-	has_unit
-	not check_unit_has_solution(input.unit, input.action)
+# [DEBUG] Unidades habilitadas para o módulo
+module_units := units if {
+    is_unit_requested
+    action := data.actions[input.action]
+    solution_id := action.solution
+    user := data.customers[input.customer].users[input.user]
+
+    units := [uid |
+        unit_enabled_in_solution(uid, solution_id)
+        user.unitAccess.modules[action.module].units[uid]
+    ]
 }
 
-unit_has_solution if {
-	has_unit
-	check_unit_has_solution(input.unit, input.action)
+# [DEBUG] Unidades habilitadas para a solução
+solution_units := units if {
+    is_unit_requested
+    solution_id := data.actions[input.action].solution
+    user := data.customers[input.customer].users[input.user]
+
+    units := [uid |
+        unit_enabled_in_solution(uid, solution_id)
+        user.unitAccess.solutions[solution_id].units[uid]
+    ]
 }
 
-check_unit_has_solution(unitUuid, actionUuid) := result if {
-	unit := data.units[unitUuid]
-	action_solution_uuid := customer_available_actions(input.customer)[actionUuid].solution
-	unit_solutions_ids := [uuid | uuid := key; _ := unit.solutions[key]]
-	result := action_solution_uuid in unit_solutions_ids
+# [DEBUG] Identifica de onde as unidades vieram
+units_read_from := source if {
+    is_unit_requested
+    action := data.actions[input.action]
+    not is_null(action.module)
+    source := concat(": ", ["Module", action.module])
 }
 
-######################################################################################################
-#                                   Verifica Usuario/Modulo/Unidade                                  #
-######################################################################################################
-user_has_module_unit_access := false if {
-	has_unit
-	not check_user_has_module_and_unit_access(input.unit, input.action)
+units_read_from := source if {
+    is_unit_requested
+    action := data.actions[input.action]
+    is_null(action.module)
+    source := concat(": ", ["Solution", action.solution])
 }
 
-user_has_module_unit_access if {
-	has_unit
-	check_user_has_module_and_unit_access(input.unit, input.action)
+# Retorna todas as unidades da solução se o usuário for sysadmin
+user_units_for_action := result if {
+    user_is_sysadmin
+    result := units_enabled_in_solution
 }
 
-check_user_has_module_and_unit_access(unitUuid, actionUuid) if {
-	user_has_unit_permission
-	unit_has_solution
-	check_unit_has_module(unitUuid, actionUuid)
+# Retorna as unidades válidas para a ação considerando módulo ou solução
+user_units_for_action := result if {
+    action := data.actions[input.action]
+    action.module != ""
+    result := module_units
 }
 
-check_unit_has_module(unitUuid, actionUuid) := result if {
-	unit := data.units[unitUuid]
-	action_solution_uuid := customer_available_actions(input.customer)[actionUuid].solution
-	solution_modules := unit.solutions[action_solution_uuid].modules
-	solution_modules_ids := [uuid | uuid := key; _ := solution_modules[key]]
-	action_module_uuid := customer_available_actions(input.customer)[actionUuid].module
-	result := action_module_uuid in solution_modules_ids
+user_units_for_action := result if {
+    action := data.actions[input.action]
+    action.module == ""
+    result := solution_units
 }
 
 # ######################################################################################################
@@ -190,6 +196,7 @@ check_unit_has_module(unitUuid, actionUuid) := result if {
 # ######################################################################################################
 user_allowed_actions := result if {
 	not input.usersList
+    not is_unit_requested
 	input.user
 	result := check_user_allowed_actions(input.user)
 }
@@ -204,6 +211,7 @@ check_user_allowed_actions(userUuid) := [action |
 # ######################################################################################################
 display_map := result if {
 	not input.usersList
+    not is_unit_requested
 	input.user
 	result := get_display_map(input.user)
 }
