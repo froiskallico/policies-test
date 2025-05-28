@@ -203,6 +203,7 @@ user_units_for_action := result if {
 
 # Retorna as unidades válidas para a ação considerando MÓDULO
 user_units_for_action := result if {
+    not user_is_sysadmin
     action := action_data(input.action)
     action.module != ""
     result := module_units
@@ -210,6 +211,7 @@ user_units_for_action := result if {
 
 # Retorna as unidades válidas para a ação considerando SOLUÇÃO
 user_units_for_action := result if {
+    not user_is_sysadmin
     action := action_data(input.action)
     action.module == ""
     result := solution_units
