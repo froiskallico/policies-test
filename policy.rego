@@ -132,8 +132,8 @@ units_enabled_in_solution := units if {
     action_data(input.action)
 
     units := [uid |
-        action := data.actions[input.action]
-        data.solutionUnits[action.solution][uid]
+        action := action_data(input.action)
+        unit_enabled_in_solution(action.solution, input.customer, uid)
     ]
 }
 
