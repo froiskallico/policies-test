@@ -129,10 +129,9 @@ unit_enabled_in_solution(solution_id, customer_id, unit_id) if {
 # [DEBUG] Lista as unidades habilitadas para a solução
 units_enabled_in_solution := units if {
     is_unit_requested
-    action_data(input.action)
+    action := action_data(input.action)
 
     units := [uid |
-        action := action_data(input.action)
         unit_enabled_in_solution(action.solution, input.customer, uid)
     ]
 }
@@ -146,7 +145,6 @@ module_units := units if {
 
     units := [uid |
         unit_enabled_in_solution(solution_id, input.customer, uid)
-        user.unitAccess.modules[action.module].units[uid]
     ]
 }
 
@@ -159,7 +157,6 @@ solution_units := units if {
 
     units := [uid |
         unit_enabled_in_solution(solution_id, input.customer, uid)
-        user.unitAccess.solutions[solution_id].units[uid]
     ]
 }
 
