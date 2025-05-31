@@ -64,9 +64,10 @@ can_user_perform_action(userUuid, action) if {
 }
 
 can_user_perform_action(userUuid, action) if {
-	action == action
-	userUuid == userUuid
+	action == input.action
+	userUuid == input.user
 	check_user_is_sysadmin(userUuid)
+	input.action in customer_available_actions(input.customer)
 }
 
 # Regra para verificar se o usuário é sysadmin
@@ -100,6 +101,7 @@ default user_allow := false
 user_allow if {
 	input.user
 	check_user_is_sysadmin(input.user)
+	input.action in customer_available_actions(input.customer)
 }
 
 user_allow if {
