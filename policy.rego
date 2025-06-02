@@ -40,16 +40,6 @@ can_user_perform_action_via_role(userUuid, action) if {
 	not check_user_has_custom_disallowance(userUuid, action)
 }
 
-can_user_perform_action_via_role(userUuid, action) if {
-	check_user_has_role_permission(userUuid, action)
-	not check_user_has_custom_disallowance(userUuid, action)
-}
-
-can_user_perform_action_via_custom(userUuid, action) if {
-	check_user_has_custom_permission(userUuid, action)
-	not check_user_has_custom_disallowance(userUuid, action)
-}
-
 can_user_perform_action_via_custom(userUuid, action) if {
 	check_user_has_custom_permission(userUuid, action)
 	not check_user_has_custom_disallowance(userUuid, action)
@@ -63,11 +53,9 @@ can_user_perform_action(userUuid, action) if {
 	can_user_perform_action_via_custom(userUuid, action)
 }
 
-can_user_perform_action(userUuid, action) if {
-	action == input.action
-	userUuid == input.user
-	check_user_is_sysadmin(userUuid)
-	input.action in customer_available_actions(input.customer)
+can_user_perform_action(user_id, action_id) if {
+	check_user_is_sysadmin(user_id)
+	action_id in customer_available_actions(input.customer)
 }
 
 # Regra para verificar se o usuário é sysadmin
