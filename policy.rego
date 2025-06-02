@@ -124,6 +124,8 @@ units_enabled_in_solution := units if {
 }
 
 # [DEBUG] Unidades habilitadas para o módulo
+# Unidades Habilitadas para o usuário, para o módulo da ação
+# Quais unidades estão habilitadas para o módulo da ação para o usuário
 module_units := units if {
     is_unit_requested
     action := action_data(input.action)
@@ -136,7 +138,7 @@ module_units := units if {
     ]
 }
 
-# [DEBUG] Unidades habilitadas para a solução
+# [DEBUG] Unidades habilitadas para a solução (mesmo de cima mas pra solução inves de módulo)
 solution_units := units if {
     is_unit_requested
     action := action_data(input.action)
@@ -321,3 +323,6 @@ allowed_users_list := result if {
 		can_user_perform_action(userUuid, input.action)
 	}
 }
+
+
+# Criar debug para verificar se a ação está habilitada na subscription do cliente
