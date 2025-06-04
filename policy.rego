@@ -129,11 +129,9 @@ units_enabled_in_solution := units if {
 module_units := units if {
     is_unit_requested
     action := action_data(input.action)
-    solution_id := action.solution
     user := user_data(input.user)
 
     units := [uid |
-        unit_enabled_in_solution(solution_id, input.customer, uid)
         user.unitAccess.modules[action.module].units[uid]
     ]
 }
@@ -146,7 +144,6 @@ solution_units := units if {
     user := user_data(input.user)
 
     units := [uid |
-        unit_enabled_in_solution(solution_id, input.customer, uid)
         user.unitAccess.solutions[solution_id].units[uid]
     ]
 }
@@ -194,7 +191,10 @@ user_units_for_action := result if {
     not user_is_sysadmin
     action := action_data(input.action)
     action.module != ""
-    result := module_units
+    result := [uid |
+        module_units[uid]
+        unit_enabled_in_solution(action.solution, input.customer, uid)
+    ]
 }
 
 # Retorna as unidades válidas para a ação considerando SOLUÇÃO
@@ -202,7 +202,10 @@ user_units_for_action := result if {
     not user_is_sysadmin
     action := action_data(input.action)
     action.module == ""
-    result := solution_units
+    result := [uid |
+        solution_units[uid]
+        unit_enabled_in_solution(action.solution, input.customer, uid)
+    ]
 }
 
 # Função para iterar entre as unidades liberadas para soluções e módulos do usuário e retornar a lista completa
