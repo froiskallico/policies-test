@@ -148,6 +148,13 @@ solution_units := units if {
     ]
 }
 
+sysadmin_units := units if {
+    is_unit_requested
+    user_is_sysadmin
+    customer := customer_data(input.customer)
+    units := customer.units
+}
+
 # [DEBUG] Identifica de onde as unidades vieram
 units_read_from := source if {
     is_unit_requested
@@ -174,8 +181,7 @@ user_units_for_action := result if {
 user_units_for_action := result if {
     user_is_sysadmin
     not action_data(input.action)
-    customer := customer_data(input.customer)
-    result := customer.units
+    result := sysadmin_units
 }
 
 # Retorna todas as unidades DO USUÁRIO se o mesmo NÃO FOR sysadmin e não houver ação especificada
