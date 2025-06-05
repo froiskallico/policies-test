@@ -196,7 +196,7 @@ user_units_for_action := result if {
 user_units_for_action := result if {
     not user_is_sysadmin
     action := action_data(input.action)
-    action.module != ""
+    not is_null(action.module)
     result := [uid |
         uid := module_units[_]
         unit_enabled_in_solution(action.solution, input.customer, uid)
@@ -207,7 +207,7 @@ user_units_for_action := result if {
 user_units_for_action := result if {
     not user_is_sysadmin
     action := action_data(input.action)
-    action.module == ""
+    is_null(action.module)
     result := [uid |
         uid := solution_units[_]
         unit_enabled_in_solution(action.solution, input.customer, uid)
