@@ -198,7 +198,7 @@ user_units_for_action := result if {
     action := action_data(input.action)
     action.module != ""
     result := [uid |
-        module_units[uid]
+        uid := module_units[_]
         unit_enabled_in_solution(action.solution, input.customer, uid)
     ]
 }
@@ -209,7 +209,7 @@ user_units_for_action := result if {
     action := action_data(input.action)
     action.module == ""
     result := [uid |
-        solution_units[uid]
+        uid := solution_units[_]
         unit_enabled_in_solution(action.solution, input.customer, uid)
     ]
 }
